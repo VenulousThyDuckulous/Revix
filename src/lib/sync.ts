@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
+import { doc, increment, setDoc, updateDoc } from 'firebase/firestore';
 import { useAuth } from './auth';
 import { useStore } from './store';
-import { seasonIdFor } from './leagues';
-import { supabase } from './supabase';
+import { firebaseDb } from './firebase';
 
 const KEY = 'revix:synced:v1';
 
@@ -14,43 +14,51 @@ function loadSynced(): Set<string> {
   }
 }
 
-/** Forwards new local activities to Supabase award_activity() once signed in.
- *  Best-effort: local progress is always kept; failures stay queued for next time. */
+/** Syncs local XP to the signed-in user's Firestore profile (best-effort).
+ *  Local progress is always kept; failures stay queued for next time. */
 export function OnlineSync() {
   const { user, configured } = useAuth();
   const { store } = useStore();
 
   useEffect(() => {
-    const sb = supabase();
-    if (!sb || !configured || !user) return;
+    const db = firebaseDb();
+    if (!db || !configured || !user) return;
     const synced = loadSynced();
-    const pending = store.activities.filter((a) => !synced.has(a.eventKey)).slice(0, 25);
+    const pending = store.activities.filter((a) => !synced.has(a.eventKey));
     if (pending.length === 0) return;
     let cancelled = false;
     (async () => {
-      const done: string[] = [];
-      for (const a of pending) {
-        const { error } = await sb.rpc('award_activity', {
-          p_event_key: a.eventKey,
-          p_kind: a.kind,
-          p_subject_id: a.subjectId,
-          p_detail: a.detail.slice(0, 200),
-          p_xp: Math.min(200, a.xp),
-          p_league_xp: Math.min(200, a.leagueXp),
-          p_correct: a.correct,
-          p_total: a.total,
-          p_season_id: seasonIdFor(new Date(a.at)),
-        });
-        if (!error) done.push(a.eventKey);
-        else break; // retry later (offline / backend hiccup)
-      }
-      if (!cancelled && done.length > 0) {
-        const next = [...synced, ...done].slice(-500);
-        try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* noop */ }
-      }
+      const ref = doc(db, 'profiles', user.uid);
+      try {
+        await setDoc(ref, {
+          displayName: store.profile.displayName || user.displayName || user.email?.split('@')[0] || 'revixer',
+          avatar: store.profile.avatar || '🚀',
+          updatedAt: Date.now(),
+        }, { merge: true });
+        // Push XP in one capped increment per flush (rules cap each write at +500).
+        const batch = pending.slice(0, 50);
+        const total = batch.reduce((s, a) => s + Math.min(200, Math.max(0, a.xp)), 0);
+        if (total > 0) {
+          if (total <= 500) {
+            await updateDoc(ref, { lifetimeXp: increment(total), updatedAt: Date.now() });
+          } else {
+            // Split so no single write exceeds the rules cap.
+            let remaining = total;
+            while (remaining > 0) {
+              const chunk = Math.min(500, remaining);
+              await updateDoc(ref, { lifetimeXp: increment(chunk), updatedAt: Date.now() });
+              remaining -= chunk;
+            }
+          }
+        }
+        if (!cancelled) {
+          const next = [...synced, ...batch.map((a) => a.eventKey)].slice(-500);
+          try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* noop */ }
+        }
+      } catch { /* offline / rules rejection — retry on next activity */ }
     })();
     return () => { cancelled = true; };
-  }, [store.activities, user, configured]);
+  }, [store.activities, store.profile.displayName, store.profile.avatar, user, configured]);
 
   return null;
 }

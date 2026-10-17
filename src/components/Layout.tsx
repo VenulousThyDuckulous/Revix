@@ -6,25 +6,26 @@ import {
 } from 'lucide-react';
 import { useStore } from '../lib/store';
 import { useAuth } from '../lib/auth';
+import { rankFor } from '../lib/ranks';
 import { QUESTIONS, SUBJECTS, TOPICS } from '../lib/content';
 import { Logo } from './ui';
 
 const NAV = [
-  { to: '/', label: 'Dashboard', icon: Home, end: true },
+  { to: '/dashboard', label: 'Dashboard', icon: Home },
   { to: '/curriculum', label: 'My Curriculum', icon: BookOpen },
   { to: '/subjects', label: 'Subjects', icon: Layers },
   { to: '/quizzes', label: 'Quizzes', icon: FileText },
   { to: '/flashcards', label: 'Flashcards', icon: CreditCard },
   { to: '/games', label: 'Games', icon: Gamepad2 },
   { to: '/exam', label: 'Exam Practice', icon: BarChart3 },
-  { to: '/leaderboard', label: 'Leaderboard', icon: Trophy },
+  { to: '/ranks', label: 'Ranks', icon: Trophy },
   { to: '/achievements', label: 'Achievements', icon: Award },
   { to: '/profile', label: 'Profile', icon: User },
   { to: '/settings', label: 'Settings', icon: SettingsIcon },
 ];
 
 export default function Layout() {
-  const { store, totalXp, weekXp, streak, updateProfile } = useStore();
+  const { store, totalXp, streak, updateProfile } = useStore();
   const { user, signOut } = useAuth();
   const [q, setQ] = useState('');
   const [mobileNav, setMobileNav] = useState(false);
@@ -45,12 +46,12 @@ export default function Layout() {
           overflowY: 'auto',
         }}
       >
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}><Logo /></Link>
+        <Link to="/dashboard" style={{ textDecoration: 'none', color: 'inherit' }}><Logo /></Link>
         <p style={{ color: 'var(--muted)', fontSize: '0.8rem', margin: '4px 0 16px' }}>Level up your learning</p>
         <nav aria-label="Main navigation" style={{ display: 'grid', gap: 2 }}>
-          {NAV.map(({ to, label, icon: Icon, end }) => (
+          {NAV.map(({ to, label, icon: Icon }) => (
             <NavLink
-              key={to} to={to} end={end}
+              key={to} to={to}
               className={({ isActive }) => (isActive ? 'navlink active' : 'navlink')}
               style={({ isActive }) => ({
                 display: 'flex', alignItems: 'center', gap: 10, padding: '9px 12px',
@@ -66,8 +67,8 @@ export default function Layout() {
         </nav>
         <div style={{ marginTop: 18, padding: 12, borderRadius: 12, background: 'var(--surface)', border: '1px solid var(--border)' }}>
           <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>🔥 Streak {streak}d · ⭐ {totalXp} XP</div>
-          <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>🏆 Week {weekXp} XP</div>
-          <div style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: 4 }}>{user ? `Online: ${user.email}` : 'Local-only mode'}</div>
+          <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{rankFor(totalXp).rank.emoji} {rankFor(totalXp).rank.name}</div>
+          <div style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: 4 }}>{user ? `Online: ${user.email}` : 'Offline mode'}</div>
           {user && <button className="btn btn-ghost" style={{ marginTop: 8, padding: '4px 10px', fontSize: '0.8rem' }} onClick={signOut}><LogOut size={14} /> Sign out</button>}
         </div>
       </aside>
@@ -108,7 +109,7 @@ export default function Layout() {
         {mobileNav && (
           <nav aria-label="Mobile navigation" className="mobile-nav" style={{ display: 'flex', gap: 6, flexWrap: 'wrap', padding: 12, borderBottom: '1px solid var(--border)' }}>
             {NAV.map(({ to, label }) => (
-              <NavLink key={to} to={to} end={to === '/'} onClick={() => setMobileNav(false)}
+              <NavLink key={to} to={to} onClick={() => setMobileNav(false)}
                 style={{ padding: '6px 10px', borderRadius: 8, border: '1px solid var(--border)', textDecoration: 'none', color: 'var(--text)', fontSize: '0.85rem' }}>
                 {label}
               </NavLink>

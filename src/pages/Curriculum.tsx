@@ -33,7 +33,7 @@ export default function Curriculum() {
 
   const markMastered = (t: Topic) => {
     setTopicStatus(t.id, 'mastered');
-    addActivity({ kind: 'topic', subjectId: t.subject, topicId: t.id, detail: `Mastered ${t.title}`, xp: 25, leagueXp: 25, eventKey: `master-${t.id}` });
+    addActivity({ kind: 'topic', subjectId: t.subject, topicId: t.id, detail: `Mastered ${t.title}`, xp: 25, eventKey: `master-${t.id}` });
   };
 
   return (

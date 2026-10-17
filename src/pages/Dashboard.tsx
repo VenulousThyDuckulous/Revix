@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { useStore } from '../lib/store';
 import { QUESTIONS, SUBJECTS, TOPICS, subjectById } from '../lib/content';
 import { Card, Empty, PageHeader, ProgressBar, Stat } from '../components/ui';
-import { seasonEndUtc, seasonIdFor } from '../lib/leagues';
+import { rankFor } from '../lib/ranks';
 import { useAuth } from '../lib/auth';
 
 export default function Dashboard() {
-  const { store, totalXp, weekXp, streak, accuracy, quizzesTaken } = useStore();
-  const { user, onlineProfile, configured } = useAuth();
+  const { store, totalXp, streak, accuracy, quizzesTaken } = useStore();
+  const { user, configured } = useAuth();
   const p = store.profile;
 
   const firstUse = store.activities.length === 0;
@@ -19,12 +19,7 @@ export default function Dashboard() {
   // weak topics: attempted activities with <60% accuracy grouped by topic/subject
   const weak = weakTopics();
   const recent = store.activities.slice(0, 6);
-
-  const seasonId = seasonIdFor();
-  const seasonEnd = seasonEndUtc(seasonId);
-  const msLeft = Math.max(0, seasonEnd.getTime() - Date.now());
-  const daysLeft = Math.floor(msLeft / 86_400_000);
-  const hrsLeft = Math.floor((msLeft % 86_400_000) / 3_600_000);
+  const myRank = rankFor(totalXp);
 
   const goalXp = p.dailyGoalMin * 5;
   const todayXp = store.activities
@@ -83,8 +78,8 @@ export default function Dashboard() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12, margin: '16px 0' }}>
         <Stat label="Total XP" value={String(totalXp)} />
+        <Stat label="Rank" value={`${myRank.rank.emoji} ${myRank.rank.name}`} sub={myRank.next ? `${myRank.xpNeeded} XP to ${myRank.next.name}` : 'Max rank!'} />
         <Stat label="Streak" value={`${streak} day${streak === 1 ? '' : 's'}`} />
-        <Stat label="Weekly League XP" value={String(weekXp)} sub={configured ? `Season ends in ${daysLeft}d ${hrsLeft}h` : 'Local only'} />
         <Stat label="Quiz accuracy" value={quizzesTaken ? `${Math.round(accuracy * 100)}%` : '—'} sub={quizzesTaken ? `${quizzesTaken} quizzes` : 'No quizzes yet'} />
         <Stat label="Topics mastered" value={String(mastered)} sub={`${learning} learning`} />
       </div>
@@ -98,11 +93,21 @@ export default function Dashboard() {
         </Card>
 
         <Card>
-          <h3 style={{ marginTop: 0 }}>🏆 League</h3>
-          {configured && user ? (
-            <p>Competing as <strong>{onlineProfile?.displayName ?? '…'}</strong> · {onlineProfile?.tier ?? '…'} tier · {onlineProfile?.weekXp ?? 0} XP this week. <Link to="/leaderboard">View standings</Link></p>
+          <h3 style={{ marginTop: 0 }}>{myRank.rank.emoji} Rank: {myRank.rank.name}</h3>
+          {myRank.next ? (
+            <>
+              <ProgressBar pct={myRank.progress} />
+              <p style={{ color: 'var(--muted)' }}>{myRank.xpNeeded} XP to {myRank.next.emoji} {myRank.next.name}. <Link to="/ranks">View all ranks</Link></p>
+            </>
           ) : (
-            <p style={{ color: 'var(--muted)' }}>Local-only mode — weekly League XP ({weekXp}) is tracked on this device. <Link to="/profile">Sign in</Link> to join global leagues once Supabase is configured.</p>
+            <p style={{ color: 'var(--muted)' }}>Max rank reached — legendary!</p>
+          )}
+          {!user && (
+            <p style={{ color: 'var(--muted)' }}>
+              {configured
+                ? <>Offline progress only. <Link to="/profile">Sign in</Link> to appear on the online ranks.</>
+                : <>Offline progress only. Online ranks need Firebase setup (see docs/firebase-setup.md).</>}
+            </p>
           )}
         </Card>
 

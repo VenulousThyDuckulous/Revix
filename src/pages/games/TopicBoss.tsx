@@ -92,7 +92,6 @@ export default function TopicBoss() {
       subjectId,
       detail: 'Topic Boss',
       xp,
-      leagueXp: xp,
       correct,
       total,
       eventKey: 'game-topic-boss-' + Date.now(),

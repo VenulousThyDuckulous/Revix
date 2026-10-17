@@ -55,7 +55,6 @@ export interface Activity {
   topicId: string | null;
   detail: string;
   xp: number;
-  leagueXp: number;
   correct: number;
   total: number;
   at: number;
@@ -110,6 +109,8 @@ export interface Profile {
   sound: boolean;
   reducedMotion: boolean;
   onboarded: boolean;
+  /** True when the user chose "continue without an account" (offline guest access). */
+  guestMode: boolean;
 }
 
 export interface StoreShape {

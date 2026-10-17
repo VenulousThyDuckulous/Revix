@@ -181,7 +181,6 @@ export default function WordScramble() {
           subjectId,
           detail: 'Word Scramble',
           xp,
-          leagueXp: xp,
           correct: solved,
           total: words.length,
           eventKey: 'game-word-scramble-' + Date.now(),

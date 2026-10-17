@@ -24,7 +24,6 @@ export default function FlashcardsPage() {
   const [params] = useSearchParams();
   const [subject, setSubject] = useState(params.get('subject') ?? '');
   const [index, setIndex] = useState(0);
-  const [flipped, setFlipped] = useState(false);
   const [mode, setMode] = useState<'bank' | 'custom'>('bank');
   const [deckId, setDeckId] = useState<string>('');
   const [newDeckName, setNewDeckName] = useState('');
@@ -33,14 +32,18 @@ export default function FlashcardsPage() {
   const [importJson, setImportJson] = useState('');
   const [msg, setMsg] = useState('');
 
-  const cards = useMemo(() => {    if (mode === 'custom') {
+  const cards = useMemo(() => {
+    if (mode === 'custom') {
       const deck = store.decks.find((d) => d.id === deckId);
       return (deck?.cards ?? []).map((c) => ({ id: `c-${c.id}`, front: c.front, back: c.back, subject: deck?.subject ?? '' }));
     }
     return bankCards(subject || null);
   }, [mode, deckId, store.decks, subject]);
 
+  const [flipped, setFlipped] = useState(false);
   const orderedIds = useMemo(() => orderForReview(cards.map((c) => c.id), store.flash), [cards, store.flash]);
+  // reset flip state whenever the card changes
+  useEffect(() => { setFlipped(false); }, [orderedIds[Math.min(index, orderedIds.length - 1)]]);
   const dueCount = orderedIds.filter((id) => isDue(store.flash[id] ?? null)).length;
   const card = cards.find((c) => c.id === orderedIds[Math.min(index, orderedIds.length - 1)]);
 
@@ -49,7 +52,7 @@ export default function FlashcardsPage() {
     const prev = store.flash[card.id] ?? null;
     recordFlashReview(card.id, scheduleReview(prev, quality));
     if (index + 1 >= orderedIds.length) {
-      addActivity({ kind: 'flashcards', subjectId: subject || null, detail: `Flashcards (${orderedIds.length} cards)`, xp: 15, leagueXp: 15, correct: orderedIds.length, total: orderedIds.length, eventKey: `flash-${Date.now()}` });
+      addActivity({ kind: 'flashcards', subjectId: subject || null, detail: `Flashcards (${orderedIds.length} cards)`, xp: 15, correct: orderedIds.length, total: orderedIds.length, eventKey: `flash-${Date.now()}` });
       setIndex(0);
     } else setIndex(index + 1);
     setFlipped(false);
@@ -162,20 +165,21 @@ export default function FlashcardsPage() {
 
       {!card && <Empty title="No cards" body="Pick a subject with questions or create your own deck above." />}
       {card && (
-        <div style={{ maxWidth: 560 }}>
+        <div key={card.id} style={{ maxWidth: 560 }}>
           <div className="flashcard-3d">
             <button
               onClick={() => setFlipped(!flipped)}
               aria-label={flipped ? 'Show front' : 'Show back'}
-              style={{ background: 'none', border: 'none', width: '100%', cursor: 'pointer', padding: 0 }}
+              style={{ background: 'none', border: 'none', width: '100%', cursor: 'pointer', padding: 0, height: '100%' }}
             >
               <div className={`flashcard-inner${flipped ? ' flipped' : ''}`}>
-                <Card style={{ minHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', textAlign: 'center' }} >
-                  <span className="flashcard-face">{card.front}<br /><small style={{ color: 'var(--muted)' }}>(tap to flip · ←/→ to move · 1-4 to rate)</small></span>
-                </Card>
-                <Card style={{ minHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', textAlign: 'center' }}>
-                  <span className="flashcard-back" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>{card.back}</span>
-                </Card>
+                <div className="flashcard-face">
+                  {card.front}<br />
+                  <small style={{ color: 'var(--muted)', display: 'block', marginTop: 8 }}>
+                    (tap to flip · ←/→ to move · 1-4 to rate)
+                  </small>
+                </div>
+                <div className="flashcard-back">{card.back}</div>
               </div>
             </button>
           </div>

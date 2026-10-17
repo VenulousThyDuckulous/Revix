@@ -1,13 +1,17 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { isOnlineConfigured, supabase } from './supabase';
-import type { User } from '@supabase/supabase-js';
+import {
+  createUserWithEmailAndPassword, deleteUser, onAuthStateChanged,
+  signInWithEmailAndPassword, signOut as fbSignOut, updateProfile as fbUpdateProfile,
+  type User,
+} from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
+import { firebaseAuth, firebaseDb, isConfigured } from './firebase';
 
-interface OnlineProfile {
+export interface OnlineProfile {
   displayName: string;
   avatar: string;
-  tier: string;
-  weekXp: number;
   lifetimeXp: number;
+  updatedAt: number;
 }
 
 interface AuthCtx {
@@ -30,67 +34,93 @@ const Ctx = createContext<AuthCtx>({
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const configured = isOnlineConfigured();
+  const configured = isConfigured();
   const [user, setUser] = useState<User | null>(null);
   const [onlineProfile, setOnlineProfile] = useState<OnlineProfile | null>(null);
   const [loading, setLoading] = useState(configured);
 
   useEffect(() => {
-    const sb = supabase();
-    if (!sb) return;
-    sb.auth.getSession().then(({ data }) => {
-      setUser(data.session?.user ?? null);
+    const auth = firebaseAuth();
+    if (!auth) {
+      setLoading(false);
+      return;
+    }
+    const unsub = onAuthStateChanged(auth, (u) => {
+      setUser(u);
       setLoading(false);
     });
-    const { data: sub } = sb.auth.onAuthStateChange((_e, session) => {
-      setUser(session?.user ?? null);
-    });
-    return () => sub.subscription.unsubscribe();
+    return unsub;
   }, []);
 
   useEffect(() => {
-    const sb = supabase();
-    if (!sb || !user) {
+    const db = firebaseDb();
+    if (!db || !user) {
       setOnlineProfile(null);
       return;
     }
-    sb.from('profiles').select('display_name,avatar,tier,week_xp,lifetime_xp').eq('id', user.id).single()
-      .then(({ data }) => {
-        if (data) {
+    getDoc(doc(db, 'profiles', user.uid))
+      .then((snap) => {
+        if (snap.exists()) {
+          const d = snap.data() as Partial<OnlineProfile>;
           setOnlineProfile({
-            displayName: data.display_name, avatar: data.avatar, tier: data.tier,
-            weekXp: data.week_xp, lifetimeXp: data.lifetime_xp,
+            displayName: String(d.displayName ?? user.displayName ?? 'revixer'),
+            avatar: String(d.avatar ?? '🚀'),
+            lifetimeXp: Number(d.lifetimeXp ?? 0),
+            updatedAt: Number(d.updatedAt ?? 0),
+          });
+        } else {
+          setOnlineProfile({
+            displayName: user.displayName ?? user.email?.split('@')[0] ?? 'revixer',
+            avatar: '🚀', lifetimeXp: 0, updatedAt: Date.now(),
           });
         }
-      });
+      })
+      .catch(() => setOnlineProfile(null));
   }, [user]);
 
   const signUp = async (email: string, password: string, displayName: string) => {
-    const sb = supabase();
-    if (!sb) return { error: 'Online accounts are not configured.' };
-    const { error } = await sb.auth.signUp({ email, password, options: { data: { display_name: displayName } } });
-    return { error: error?.message ?? null };
+    const auth = firebaseAuth();
+    if (!auth) return { error: 'Online accounts are not configured.' };
+    try {
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+      await fbUpdateProfile(cred.user, { displayName: displayName || email.split('@')[0] });
+      return { error: null };
+    } catch (e) {
+      return { error: e instanceof Error ? e.message : 'Sign up failed.' };
+    }
   };
+
   const signIn = async (email: string, password: string) => {
-    const sb = supabase();
-    if (!sb) return { error: 'Online accounts are not configured.' };
-    const { error } = await sb.auth.signInWithPassword({ email, password });
-    return { error: error?.message ?? null };
+    const auth = firebaseAuth();
+    if (!auth) return { error: 'Online accounts are not configured.' };
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      return { error: null };
+    } catch (e) {
+      return { error: e instanceof Error ? e.message : 'Sign in failed.' };
+    }
   };
+
   const signOut = async () => {
-    await supabase()?.auth.signOut();
+    const auth = firebaseAuth();
+    if (auth) await fbSignOut(auth);
     setUser(null);
     setOnlineProfile(null);
   };
+
   const deleteAccount = async () => {
-    const sb = supabase();
-    if (!sb || !user) return { error: 'Not signed in.' };
-    // Remove profile row; auth user deletion requires the service role (docs explain owner flow).
-    const { error } = await sb.from('profiles').delete().eq('id', user.id);
-    if (error) return { error: error.message };
-    await sb.auth.signOut();
-    setUser(null);
-    return { error: null };
+    const auth = firebaseAuth();
+    if (!auth?.currentUser) return { error: 'Not signed in.' };
+    try {
+      // Profile doc cleanup is best-effort; rules allow users to delete their own doc
+      // (see firestore.rules). Auth deletion may require a recent sign-in.
+      await deleteUser(auth.currentUser);
+      setUser(null);
+      setOnlineProfile(null);
+      return { error: null };
+    } catch (e) {
+      return { error: e instanceof Error ? e.message : 'Deletion failed — try signing in again first.' };
+    }
   };
 
   return (

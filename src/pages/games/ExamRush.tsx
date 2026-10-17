@@ -111,7 +111,6 @@ export default function ExamRush() {
       subjectId,
       detail: 'Exam Rush',
       xp,
-      leagueXp: xp,
       correct: cc,
       total,
       eventKey: 'game-exam-rush-' + Date.now(),

@@ -46,9 +46,9 @@ export default function QuizRunner({ questions, subjectId, topicId, title, timed
       const gg = qq.id === q.id && qq.type === 'matching' ? matchSel : g;
       return checkAnswer(qq, gg).correct;
     }).length;
-    const { xp, leagueXp } = scoreQuiz(correct, order.length);
+    const { xp } = scoreQuiz(correct, order.length);
     addActivity({
-      kind: 'quiz', subjectId, topicId, detail: title, xp, leagueXp,
+      kind: 'quiz', subjectId, topicId, detail: title, xp,
       correct, total: order.length, eventKey: `quiz-${Date.now()}-${title}`,
     });
     setFinished(true);

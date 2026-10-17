@@ -120,7 +120,6 @@ export default function MatchUp() {
       subjectId,
       detail: 'MatchUp',
       xp,
-      leagueXp: xp,
       correct: pairs.length,
       total: Math.max(attemptTotal, pairs.length),
       eventKey: 'game-matchup-' + Date.now(),

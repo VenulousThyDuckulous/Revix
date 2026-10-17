@@ -140,7 +140,6 @@ export default function MemoryMatch() {
       subjectId,
       detail: 'MemoryMatch',
       xp,
-      leagueXp: xp,
       correct: pairCount,
       total: Math.max(finalMoves, pairCount),
       eventKey: 'game-memorymatch-' + Date.now(),

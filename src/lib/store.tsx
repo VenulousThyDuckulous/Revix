@@ -2,7 +2,6 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import type {
   Activity, ActivityKind, CustomDeck, FlashState, Profile, StoreShape, TopicProgress, TopicStatus, UserTopic,
 } from './types';
-import { REWARDS, seasonIdFor, seasonStartUtc } from './leagues';
 
 const KEY = 'revix:v1';
 
@@ -36,7 +35,7 @@ function defaultProfile(): Profile {
   return {
     displayName: '', avatar: '🚀', year: null, subjects: [], mathsTier: 'unknown',
     scienceRoute: 'unknown', examBoard: '', dailyGoalMin: 20, theme: 'dark',
-    sound: true, reducedMotion: false, onboarded: false,
+    sound: true, reducedMotion: false, onboarded: false, guestMode: false,
   };
 }
 
@@ -80,25 +79,12 @@ export function computeStreak(activities: Activity[], now = Date.now()): number 
   return streak;
 }
 
-/** League XP earned today (UTC) — enforces the daily cap client-side (server enforces too). */
-export function leagueXpToday(activities: Activity[], now = Date.now()): number {
-  const start = new Date(now);
-  start.setUTCHours(0, 0, 0, 0);
-  return activities.filter((a) => a.at >= start.getTime()).reduce((s, a) => s + a.leagueXp, 0);
-}
-
-export function weeklyLeagueXp(activities: Activity[], now = Date.now()): number {
-  const start = seasonStartUtc(seasonIdFor(new Date(now))).getTime();
-  return activities.filter((a) => a.at >= start).reduce((s, a) => s + a.leagueXp, 0);
-}
-
 interface AddActivityOpts {
   kind: ActivityKind;
   subjectId?: string | null;
   topicId?: string | null;
   detail?: string;
   xp: number;
-  leagueXp?: number;
   correct?: number;
   total?: number;
   eventKey?: string;
@@ -121,7 +107,6 @@ interface StoreCtx {
   importData: (json: string) => { ok: boolean; error?: string };
   resetLocal: () => void;
   totalXp: number;
-  weekXp: number;
   streak: number;
   accuracy: number;
   quizzesTaken: number;
@@ -199,14 +184,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       const eventKey = opts.eventKey ?? uid();
       if (s.activities.some((a) => a.eventKey === eventKey)) return s; // duplicate prevention
       const at = opts.at ?? Date.now();
-      // Daily league cap (client-side; Supabase function enforces server-side too)
-      const today = leagueXpToday(s.activities, at);
-      const wantLeague = opts.leagueXp ?? opts.xp;
-      const leagueXp = Math.max(0, Math.min(wantLeague, REWARDS.DAILY_LEAGUE_CAP - today));
       created = {
         id: uid(), kind: opts.kind, subjectId: opts.subjectId ?? null, topicId: opts.topicId ?? null,
-        detail: opts.detail ?? '', xp: opts.xp, leagueXp, correct: opts.correct ?? 0,
-        total: opts.total ?? 0, at, eventKey,
+        detail: opts.detail ?? '', xp: Math.max(0, Math.min(200, Math.floor(opts.xp))),
+        correct: opts.correct ?? 0, total: opts.total ?? 0, at, eventKey,
       };
       const activities = [...(created ? [created] : []), ...s.activities].slice(0, 500);
       // achievement checks
@@ -275,7 +256,6 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 
   const derived = useMemo(() => {
     const totalXp = store.activities.reduce((s, a) => s + a.xp, 0);
-    const weekXp = weeklyLeagueXp(store.activities);
     const streak = computeStreak(store.activities);
     const answered = store.activities.reduce((s, a) => s + a.correct, 0);
     const asked = store.activities.reduce((s, a) => s + a.total, 0);
@@ -285,7 +265,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       .filter((a) => dayKey(a.at) === dayKey(Date.now()))
       .reduce((s, a) => s + a.xp, 0);
     return {
-      totalXp, weekXp, streak,
+      totalXp, streak,
       accuracy: asked === 0 ? 0 : answered / asked,
       quizzesTaken: store.activities.filter((a) => a.kind === 'quiz').length,
       goalMet: goal > 0 && todayXp >= goal,
@@ -302,7 +282,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const value: StoreCtx = {
     store, updateProfile, setTopicStatus, setTopicMeta, addUserTopic, removeUserTopic,
     addActivity, recordFlashReview, unlock, upsertDeck, removeDeck, exportData, importData, resetLocal,
-    totalXp: derived.totalXp, weekXp: derived.weekXp, streak: derived.streak,
+    totalXp: derived.totalXp, streak: derived.streak,
     accuracy: derived.accuracy, quizzesTaken: derived.quizzesTaken,
   };
 

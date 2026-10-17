@@ -75,7 +75,6 @@ export default function Quickfire() {
       subjectId: metaRef.current.subjectId,
       detail: 'Quickfire',
       xp,
-      leagueXp: xp,
       correct: s.correct,
       total: s.answered,
       eventKey: 'game-quickfire-' + Date.now(),

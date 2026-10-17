@@ -47,7 +47,6 @@ export interface QuizResult {
   total: number;
   accuracy: number;
   xp: number;
-  leagueXp: number;
 }
 
 /** XP: 10 per correct answer + completion bonus. League XP mirrors XP but is capped downstream. */
@@ -56,7 +55,7 @@ export function scoreQuiz(correct: number, total: number): QuizResult {
   const completionBonus = total > 0 ? 5 : 0;
   const perfectBonus = total > 0 && correct === total ? 10 : 0;
   const xp = correct * 10 + completionBonus + perfectBonus;
-  return { correct, total, accuracy, xp, leagueXp: xp };
+  return { correct, total, accuracy, xp };
 }
 
 export function shuffle<T>(arr: T[], rand: () => number = Math.random): T[] {

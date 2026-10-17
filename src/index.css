@@ -174,15 +174,31 @@ a { color: var(--accent-2); }
   transition: width 0.4s ease;
 }
 
-.flashcard-3d { perspective: 1200px; }
+.flashcard-3d { perspective: 1200px; min-height: 260px; }
 .flashcard-inner {
   transform-style: preserve-3d;
   transition: transform 0.35s ease;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 .flashcard-inner.flipped { transform: rotateY(180deg); }
-.flashcard-face {
+.flashcard-face, .flashcard-back {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 18px;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--glow);
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
 }
-.flashcard-back { transform: rotateY(180deg); position: absolute; inset: 0; }
+.flashcard-back { transform: rotateY(180deg); }

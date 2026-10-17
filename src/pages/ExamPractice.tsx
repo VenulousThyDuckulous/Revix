@@ -24,7 +24,7 @@ export default function ExamPractice() {
     const correct = pool.filter((q) => checkAnswer(q, answers[q.id]).correct).length;
     addActivity({
       kind: 'exam', subjectId: subject === 'mixed' ? null : subject,
-      detail: `Exam practice (${pool.length} Q)`, xp: 20 + correct * 5, leagueXp: 20 + correct * 5,
+      detail: `Exam practice (${pool.length} Q)`, xp: 20 + correct * 5,
       correct, total: pool.length, eventKey: `exam-${Date.now()}`,
     });
   };

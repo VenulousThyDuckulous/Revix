@@ -2,40 +2,40 @@
 
 A complete GCSE revision platform for UK students (Years 10–11): dashboard, curriculum
 browser, quizzes, flashcards, six revision games, exam practice, achievements, and
-competitive weekly leagues.
+personal ranks.
 
 **Live site:** https://venulousthyduckulous.github.io/Revix/ (after enabling Pages — see below)
 
 ## Features
 
+- **Landing page** — site aim, features, sign in / sign up, or continue without an account.
 - **Onboarding** — year, subjects, maths tier, science route, daily goal, theme, avatar. No account needed.
-- **Dashboard** — streak, XP, weekly League XP, accuracy, weak topics, recommendations — all from real stored data.
+- **Dashboard** — streak, XP, rank, accuracy, weak topics, recommendations — all from real stored data.
 - **My Curriculum** — Year → Subject → Topic → Subtopic browser with search, filters, status tracking,
   notes, reminders, difficult flags, personal topics, and honest source-verification badges.
 - **26 subject pages** — overviews, topics, progress, and subject-specific revision approaches.
 - **Quiz engine** — MCQ, true/false, short, fill-in-the-blank, matching, numeric (with tolerance),
   timed/untimed, explanations, retry, full review.
-- **Flashcards** — flip/shuffle/keyboard, spaced repetition (SM-2-lite), due-first ordering,
+- **Flashcards** — flip/shuffle/keyboard, spaced repetition, due-first ordering,
   personal decks with validated JSON import/export.
 - **Six games** — Quickfire, Match-Up, Memory Match, Topic Boss, Word Scramble, Exam Rush.
 - **Exam practice** — timed sessions, self-marking against model answers, mistakes-to-revisit list.
 - **Achievements** — 12 achievements unlocked from real activity.
-- **Leagues** — Bronze → Champion weekly seasons (Mon 00:00 UTC), validated rewards, daily caps,
-  duplicate prevention, deterministic tie-breaks. Works locally; global standings need Supabase.
+- **Ranks** — Rookie → Champion from lifetime XP. No seasons, no relegation — your rank never drops.
 - **Local-first** — everything works signed out; data persists in versioned LocalStorage with
   export/import and reset.
 
 ## Tech
 
 React 19 + TypeScript + Vite + Tailwind CSS v4 + React Router (HashRouter for GitHub Pages) +
-Lucide icons + Supabase (optional) + Vitest.
+Lucide icons + Firebase (optional) + Vitest.
 
 ## Develop
 
 ```bash
 npm install
 npm run dev      # local dev
-npm test         # 33 tests
+npm test         # 30 tests
 npm run typecheck
 npm run build    # production build → dist/
 ```
@@ -49,12 +49,11 @@ npm run build    # production build → dist/
 `vite.config.ts` sets `base: '/Revix/'`; HashRouter means refresh/direct links work with no
 server rewrites, and there are no hardcoded localhost URLs or secrets in the build.
 
-## Online leagues (Supabase)
+## Online accounts (Firebase)
 
-Local mode works out of the box. To enable accounts + global leaderboards, follow
-[`docs/supabase-setup.md`](docs/supabase-setup.md) (migration in
-`supabase/migrations/001_revix_backend.sql`, then set `VITE_SUPABASE_URL` /
-`VITE_SUPABASE_ANON_KEY`). Without these, the app honestly reports local-only mode.
+Local mode works out of the box. To enable sign-in and global ranks, follow
+[`docs/firebase-setup.md`](docs/firebase-setup.md) and set the `VITE_FIREBASE_*`
+variables. Without them, the app honestly reports offline mode.
 
 ## Curriculum sources
 
