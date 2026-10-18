@@ -20,6 +20,7 @@ import NotFound from './pages/NotFound';
 import Onboarding from './pages/Onboarding';
 import Profile from './pages/Profile';
 import Quizzes from './pages/Quizzes';
+import Lesson from './pages/Lesson';
 import Ranks from './pages/Ranks';
 import Settings from './pages/Settings';
 import SubjectDetail from './pages/SubjectDetail';
@@ -57,6 +58,7 @@ export default function App() {
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="onboarding" element={<Onboarding />} />
                 <Route path="curriculum" element={<Curriculum />} />
+                <Route path="lesson/:topicId" element={<Lesson />} />
                 <Route path="subjects" element={<Subjects />} />
                 <Route path="subjects/:id" element={<SubjectDetail />} />
                 <Route path="quizzes" element={<Quizzes />} />

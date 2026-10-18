@@ -80,31 +80,31 @@ export default function Dashboard() {
                 const st = prog?.status ?? 'not-started';
                 const isLocked = st === 'not-started' && group.topics.indexOf(t) > 0 && !group.topics.slice(0, group.topics.indexOf(t)).some((pt) => store.topicProgress[pt.id]?.status === 'mastered');
                 const crowns = prog?.status === 'mastered' ? 1 : 0;
-                return (
-                  <Link
-                    key={t.id}
-                    to={`/curriculum?topic=${t.id}`}
-                    onClick={() => navigate(`/curriculum?topic=${t.id}`)}
-                    style={{
-                      display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
-                      textDecoration: 'none', color: 'inherit', minWidth: 100,
-                    }}
-                  >
-                    <div className="topic-node" style={{
-                      width: 80, height: 80, borderRadius: 16, background: isLocked ? '#e2e8f0' : 'var(--surface-2)',
-                      border: `2px solid ${isLocked ? 'var(--border)' : st === 'mastered' ? 'var(--good)' : 'var(--accent-2)'}`,
-                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                      cursor: isLocked ? 'not-allowed' : 'pointer', position: 'relative',
-                    }}>
-                      {crowns > 0 && <div className="crown">👑</div>}
-                      <span style={{
-                        fontSize: '2rem', opacity: isLocked ? 0.4 : 1,
-                      }}>{topicEmoji(t.subject)}</span>
-                      {st === 'mastered' && <Star size={14} fill='#f6ad55' style={{ position: 'absolute', top: 4, left: 4 }} />}
-                    </div>
+                const node = (
+                  <div key={t.id} className="topic-node" style={{
+                    width: 80, height: 80, borderRadius: 16, background: isLocked ? '#e2e8f0' : 'var(--surface-2)',
+                    border: `2px solid ${isLocked ? 'var(--border)' : st === 'mastered' ? 'var(--good)' : 'var(--accent-2)'}`,
+                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                    cursor: isLocked ? 'not-allowed' : 'pointer', position: 'relative',
+                  }}>
+                    {crowns > 0 && <div className="crown">👑</div>}
+                    <span style={{
+                      fontSize: '2rem', opacity: isLocked ? 0.4 : 1,
+                    }}>{topicEmoji(t.subject)}</span>
+                    {st === 'mastered' && <Star size={14} fill='#f6ad55' style={{ position: 'absolute', top: 4, left: 4 }} />}
+                  </div>
+                );
+                const content = (
+                  <>
+                    {node}
                     <span style={{ fontSize: '0.8rem', fontWeight: 600, opacity: isLocked ? 0.5 : 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 70 }}>
                       {t.title}
                     </span>
+                  </>
+                );
+                return isLocked ? content : (
+                  <Link key={t.id} to={`/lesson/${t.id}`} onClick={() => navigate(`/lesson/${t.id}`)} style={{ textDecoration: 'none', color: 'inherit', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+                    {content}
                   </Link>
                 );
               })}

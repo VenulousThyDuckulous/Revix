@@ -11,9 +11,9 @@ import { Logo } from './ui';
 
 const NAV = [
   { to: '/dashboard', label: 'Learn', icon: Home },
-  { to: '/leaderboard', label: 'Leaderboards', icon: Trophy },
-  { to: '/games', label: 'Quests', icon: Gamepad2 },
-  { to: '/achievements', label: 'Shop', icon: Award },
+  { to: '/ranks', label: 'Ranks', icon: Trophy },
+  { to: '/games', label: 'Games', icon: Gamepad2 },
+  { to: '/achievements', label: 'Achievements', icon: Award },
   { to: '/profile', label: 'Profile', icon: User },
   { to: '/settings', label: 'More', icon: MoreHorizontal },
 ];
