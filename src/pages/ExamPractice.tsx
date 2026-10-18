@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { QUESTIONS, SUBJECTS } from '../lib/content';
 import { checkAnswer, selectQuestions } from '../lib/quiz';
@@ -12,12 +12,18 @@ export default function ExamPractice() {
   const [count, setCount] = useState(6);
   const [timed, setTimed] = useState(false);
   const [started, setStarted] = useState(false);
+  const [runKey, setRunKey] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const pool = selectQuestions(QUESTIONS, {
-    subject: subject === 'mixed' ? null : subject, count, shuffleOrder: true,
-  });
+  // Lock the shuffled pool when the session starts so answering never re-randomises it.
+  const pool = useMemo(
+    () => selectQuestions(QUESTIONS, {
+      subject: subject === 'mixed' ? null : subject, count, shuffleOrder: true,
+    }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [runKey, subject, count],
+  );
 
   const submit = () => {
     setSubmitted(true);
@@ -50,7 +56,7 @@ export default function ExamPractice() {
             <label style={{ display: 'flex', gap: 6, alignItems: 'center', paddingBottom: 10 }}>
               <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} /> Timed (1 min/question)
             </label>
-            <button className="btn btn-primary" onClick={() => { setStarted(true); setSubmitted(false); setAnswers({}); }}>Start session</button>
+            <button className="btn btn-primary" onClick={() => { setRunKey((k) => k + 1); setStarted(true); setSubmitted(false); setAnswers({}); }}>Start session</button>
           </div>
           <p style={{ color: 'var(--muted)' }}>Self-marking guidance: compare longer answers to the model points — award yourself the mark only if you made the same point. This won't perfectly match an official mark scheme.</p>
         </Card>
@@ -108,7 +114,7 @@ export default function ExamPractice() {
               <li key={q.id}>{q.question} — <Link to={`/quizzes?subject=${q.subject}`}>practise more {q.subject}</Link></li>
             ))}
           </ul>
-          <button className="btn btn-ghost" onClick={() => { setStarted(false); setSubmitted(false); }}>New session</button>
+          <button className="btn btn-ghost" onClick={() => { setRunKey((k) => k + 1); setStarted(false); setSubmitted(false); }}>New session</button>
         </Card>
       )}
     </div>
