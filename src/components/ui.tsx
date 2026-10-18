@@ -2,14 +2,12 @@ import { Link } from 'react-router-dom';
 import { verificationLabel } from '../lib/content';
 import type { Topic } from '../lib/types';
 
+import revixLogo from '../assets/revix-logo.jfif';
+
 export function Logo({ size = 34 }: { size?: number }) {
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-      <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="14" fill="#140f2e" stroke="#7c3aed" strokeWidth="2" />
-        <path d="M18 14h14a12 12 0 0 1 0 24H26l12 12-6 0-11-11v11H18z" fill="#a78bfa" />
-        <circle cx="46" cy="46" r="5" fill="#22d3ee" />
-      </svg>
+      <img src={revixLogo} alt="Revix" style={{ width: size, height: size, borderRadius: '12px', objectFit: 'cover', display: 'block' }} />
       <span style={{ fontWeight: 800, fontSize: size * 0.55, letterSpacing: 0.5 }}>
         Revix
       </span>

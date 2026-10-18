@@ -9,14 +9,14 @@ export interface Rank {
 }
 
 export const RANKS: Rank[] = [
-  { id: 'rookie', name: 'Rookie', minXp: 0, emoji: '🌱', color: '#9ca3af' },
-  { id: 'bronze', name: 'Bronze', minXp: 150, emoji: '🥉', color: '#cd7f32' },
-  { id: 'silver', name: 'Silver', minXp: 400, emoji: '🥈', color: '#c0c0c0' },
-  { id: 'gold', name: 'Gold', minXp: 800, emoji: '🥇', color: '#ffd257' },
-  { id: 'platinum', name: 'Platinum', minXp: 1500, emoji: '💠', color: '#7fe7e7' },
-  { id: 'diamond', name: 'Diamond', minXp: 3000, emoji: '💎', color: '#7cc4ff' },
-  { id: 'master', name: 'Master', minXp: 5500, emoji: '🏆', color: '#f0abfc' },
-  { id: 'champion', name: 'Champion', minXp: 9000, emoji: '👑', color: '#c084fc' },
+  { id: 'rookie', name: 'Rookie', minXp: 0, emoji: '🌱', color: '#94a3b8' },
+  { id: 'bronze', name: 'Bronze', minXp: 150, emoji: '🥉', color: '#f97316' },
+  { id: 'silver', name: 'Silver', minXp: 400, emoji: '🥈', color: '#e2e8f0' },
+  { id: 'gold', name: 'Gold', minXp: 800, emoji: '🥇', color: '#fbbf24' },
+  { id: 'platinum', name: 'Platinum', minXp: 1500, emoji: '💠', color: '#06b6d4' },
+  { id: 'diamond', name: 'Diamond', minXp: 3000, emoji: '💎', color: '#22d3ee' },
+  { id: 'master', name: 'Master', minXp: 5500, emoji: '🏆', color: '#ec4899' },
+  { id: 'champion', name: 'Champion', minXp: 9000, emoji: '👑', color: '#a855f7' },
 ];
 
 export interface RankProgress {
