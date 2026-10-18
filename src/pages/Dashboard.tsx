@@ -1,156 +1,144 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../lib/store';
-import { QUESTIONS, SUBJECTS, TOPICS, subjectById } from '../lib/content';
-import { Card, Empty, PageHeader, ProgressBar, Stat } from '../components/ui';
+import { SUBJECTS, TOPICS } from '../lib/content';
+import { Card, ProgressBar } from '../components/ui';
 import { rankFor } from '../lib/ranks';
-import { useAuth } from '../lib/auth';
+import { Star } from 'lucide-react';
 
 export default function Dashboard() {
-  const { store, totalXp, streak, accuracy, quizzesTaken } = useStore();
-  const { user, configured } = useAuth();
+  const { store, totalXp, streak } = useStore();
   const p = store.profile;
-
-  const firstUse = store.activities.length === 0;
-  const mastered = Object.entries(store.topicProgress).filter(([, v]) => v.status === 'mastered').length;
-  const learning = Object.entries(store.topicProgress).filter(([, v]) => v.status === 'learning').length;
-
-  const mySubjects = SUBJECTS.filter((s) => p.subjects.includes(s.id));
-
-  // weak topics: attempted activities with <60% accuracy grouped by topic/subject
-  const weak = weakTopics();
-  const recent = store.activities.slice(0, 6);
+  const navigate = useNavigate();
   const myRank = rankFor(totalXp);
 
-  const goalXp = p.dailyGoalMin * 5;
-  const todayXp = store.activities
-    .filter((a) => new Date(a.at).toDateString() === new Date().toDateString())
-    .reduce((s, a) => s + a.xp, 0);
+  const mastered = Object.entries(store.topicProgress).filter(([, v]) => v.status === 'mastered').length;
+  const totalTopics = TOPICS.length;
+  const firstUse = store.activities.length === 0;
 
-  const name = p.displayName || (user?.email?.split('@')[0]) || 'Revixer';
-  const hour = new Date().getHours();
-  const greet = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
-
-  function weakTopics() {
-    const by = new Map<string, { c: number; t: number }>();
-    for (const a of store.activities) {
-      if (!a.total) continue;
-      const key = a.topicId ?? a.subjectId ?? 'general';
-      const cur = by.get(key) ?? { c: 0, t: 0 };
-      cur.c += a.correct;
-      cur.t += a.total;
-      by.set(key, cur);
-    }
-    return [...by.entries()]
-      .filter(([, v]) => v.t >= 3 && v.c / v.t < 0.6)
-      .sort((a, b) => a[1].c / a[1].t - b[1].c / b[1].t)
-      .slice(0, 4)
-      .map(([key, v]) => {
-        const topic = TOPICS.find((t) => t.id === key);
-        const subj = topic ? subjectById(topic.subject) : subjectById(key);
-        return { key, label: topic ? topic.title : (subj?.name ?? key), to: topic ? `/curriculum?topic=${topic.id}` : subj ? `/subjects/${subj.id}` : '/quizzes', acc: v.c / v.t };
-      });
-  }
-
-  const recommendation = weak[0]
-    ? { label: `Revisit ${weak[0].label}`, to: weak[0].to }
-    : mySubjects[0]
-      ? { label: `Revise ${mySubjects[0].name}`, to: `/subjects/${mySubjects[0].id}` }
-      : { label: 'Choose your subjects', to: '/onboarding' };
+  // Group topics by subject for the learning path
+  const subjectGroups = SUBJECTS.map((s) => {
+    const year = p.year;
+    const topics = TOPICS.filter((t) => t.subject === s.id && (!year || t.year === year));
+    const done = topics.filter((t) => store.topicProgress[t.id]?.status === 'mastered').length;
+    return { subject: s, topics, done, total: topics.length };
+  }).filter((g) => g.topics.length > 0);
 
   return (
     <div>
-      <PageHeader
-        title={`${greet}, ${name}! ${p.avatar || ''}`}
-        sub={p.year ? `Year ${p.year} · ${mySubjects.length} subjects · ${streak}-day streak` : 'Set up your year and subjects to personalise Revix.'}
-        actions={!p.onboarded ? <Link to="/onboarding" className="btn btn-primary">Get started</Link> : undefined}
-      />
+      {/* Duolingo-style header banner */}
+      <div className="level-header" style={{ padding: '24px 28px', marginBottom: 24, position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: -40, right: -40, fontSize: '10rem', opacity: 0.15, pointerEvents: 'none' }}>🦉</div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
+          <div>
+            <h2 style={{ margin: '0 0 4px', fontSize: '1.6rem', fontWeight: 800 }}>
+              {p.year ? `Year ${p.year}` : 'Revix'}
+            </h2>
+            <p style={{ margin: 0, opacity: 0.9, fontSize: '1rem' }}>
+              {p.subjects.length > 0 ? `${p.subjects.length} subjects · ${mastered} topics mastered` : 'Pick your subjects to start learning'}
+            </p>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: '1.3rem', fontWeight: 800 }}>{myRank.rank.emoji} {myRank.rank.name}</div>
+            <div style={{ marginTop: 6, width: 180 }}><ProgressBar pct={myRank.progress} /></div>
+            <div style={{ fontSize: '0.85rem', opacity: 0.9, marginTop: 4 }}>
+              {myRank.next ? `${myRank.xpNeeded} XP to ${myRank.next.name}` : 'Max rank!'}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {firstUse && (
-        <Empty
-          title="Welcome to Revix!"
-          body="Nothing revised yet — your stats, streaks and achievements will appear here once you start. Try a quick quiz or pick your subjects."
-          action={<div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/quizzes" className="btn btn-primary">Take a quiz</Link>
-            <Link to="/onboarding" className="btn btn-ghost">Set up profile</Link>
-          </div>}
-        />
+        <Card style={{ textAlign: 'center', padding: '34px 20px', background: '#fffbe6', borderColor: '#f6e05e' }}>
+          <div style={{ fontSize: '2.5rem', marginBottom: 10 }}>🦉</div>
+          <h3 style={{ margin: '0 0 8px', fontWeight: 800 }}>Welcome to Revix!</h3>
+          <p style={{ color: 'var(--muted)', margin: '0 0 16px' }}>
+            Tap a topic below to start a lesson. Earn XP, keep your streak, and climb the ranks.
+          </p>
+          {!p.onboarded && (
+            <Link to="/onboarding" className="btn btn-primary">Get started →</Link>
+          )}
+        </Card>
       )}
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12, margin: '16px 0' }}>
-        <Stat label="Total XP" value={String(totalXp)} />
-        <Stat label="Rank" value={`${myRank.rank.emoji} ${myRank.rank.name}`} sub={myRank.next ? `${myRank.xpNeeded} XP to ${myRank.next.name}` : 'Max rank!'} />
-        <Stat label="Streak" value={`${streak} day${streak === 1 ? '' : 's'}`} />
-        <Stat label="Quiz accuracy" value={quizzesTaken ? `${Math.round(accuracy * 100)}%` : '—'} sub={quizzesTaken ? `${quizzesTaken} quizzes` : 'No quizzes yet'} />
-        <Stat label="Topics mastered" value={String(mastered)} sub={`${learning} learning`} />
-      </div>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12 }}>
-        <Card>
-          <h3 style={{ marginTop: 0 }}>🎯 Daily goal</h3>
-          <p style={{ color: 'var(--muted)' }}>{todayXp} / {goalXp} XP ({p.dailyGoalMin} min/day)</p>
-          <ProgressBar pct={goalXp ? Math.min(1, todayXp / goalXp) : 0} />
-          <p style={{ marginBottom: 0 }}>⭐ <strong>Recommended next:</strong> <Link to={recommendation.to}>{recommendation.label}</Link></p>
-        </Card>
-
-        <Card>
-          <h3 style={{ marginTop: 0 }}>{myRank.rank.emoji} Rank: {myRank.rank.name}</h3>
-          {myRank.next ? (
-            <>
-              <ProgressBar pct={myRank.progress} />
-              <p style={{ color: 'var(--muted)' }}>{myRank.xpNeeded} XP to {myRank.next.emoji} {myRank.next.name}. <Link to="/ranks">View all ranks</Link></p>
-            </>
-          ) : (
-            <p style={{ color: 'var(--muted)' }}>Max rank reached — legendary!</p>
-          )}
-          {!user && (
-            <p style={{ color: 'var(--muted)' }}>
-              {configured
-                ? <>Offline progress only. <Link to="/profile">Sign in</Link> to appear on the online ranks.</>
-                : <>Offline progress only. Online ranks need Firebase setup (see docs/firebase-setup.md).</>}
-            </p>
-          )}
-        </Card>
-
-        <Card>
-          <h3 style={{ marginTop: 0 }}>⚠️ Weak topics</h3>
-          {weak.length === 0
-            ? <p style={{ color: 'var(--muted)' }}>No weak spots detected yet — keep quizzing and they will show up here.</p>
-            : <ul style={{ margin: 0, paddingLeft: 18 }}>
-              {weak.map((w) => <li key={w.key}><Link to={w.to}>{w.label}</Link> — {Math.round(w.acc * 100)}%</li>)}
-            </ul>}
-        </Card>
-      </div>
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12, marginTop: 12 }}>
-        <Card>
-          <h3 style={{ marginTop: 0 }}>📚 My subjects</h3>
-          {mySubjects.length === 0
-            ? <p style={{ color: 'var(--muted)' }}>No subjects selected. <Link to="/onboarding">Choose subjects</Link></p>
-            : <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {mySubjects.map((s) => <Link key={s.id} to={`/subjects/${s.id}`} className="badge" style={{ textDecoration: 'none', color: 'var(--text)' }}>{s.name}</Link>)}
-            </div>}
-          <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
-            <Link to="/quizzes" className="btn btn-ghost">Quizzes</Link>
-            <Link to="/flashcards" className="btn btn-ghost">Flashcards</Link>
-            <Link to="/games" className="btn btn-ghost">Games</Link>
-            <Link to="/exam" className="btn btn-ghost">Exam practice</Link>
+      {/* Learning path — Duolingo topic tree */}
+      <div style={{ display: 'grid', gap: 16 }}>
+        {subjectGroups.map((group) => (
+          <div key={group.subject.id} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+              <div style={{
+                width: 32, height: 32, borderRadius: 8, background: group.subject.color,
+                display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: '0.9rem',
+              }}>{group.subject.name.charAt(0)}</div>
+              <span style={{ fontWeight: 800, fontSize: '1.05rem' }}>{group.subject.name}</span>
+              <span className="badge" style={{ marginLeft: 'auto', fontSize: '0.8rem' }}>
+                {group.done}/{group.total}
+              </span>
+            </div>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              {group.topics.map((t) => {
+                const prog = store.topicProgress[t.id];
+                const st = prog?.status ?? 'not-started';
+                const isLocked = st === 'not-started' && group.topics.indexOf(t) > 0 && !group.topics.slice(0, group.topics.indexOf(t)).some((pt) => store.topicProgress[pt.id]?.status === 'mastered');
+                const crowns = prog?.status === 'mastered' ? 1 : 0;
+                return (
+                  <Link
+                    key={t.id}
+                    to={`/curriculum?topic=${t.id}`}
+                    onClick={() => navigate(`/curriculum?topic=${t.id}`)}
+                    style={{
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
+                      textDecoration: 'none', color: 'inherit', minWidth: 100,
+                    }}
+                  >
+                    <div className="topic-node" style={{
+                      width: 80, height: 80, borderRadius: 16, background: isLocked ? '#e2e8f0' : 'var(--surface-2)',
+                      border: `2px solid ${isLocked ? 'var(--border)' : st === 'mastered' ? 'var(--good)' : 'var(--accent-2)'}`,
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                      cursor: isLocked ? 'not-allowed' : 'pointer', position: 'relative',
+                    }}>
+                      {crowns > 0 && <div className="crown">👑</div>}
+                      <span style={{
+                        fontSize: '2rem', opacity: isLocked ? 0.4 : 1,
+                      }}>{topicEmoji(t.subject)}</span>
+                      {st === 'mastered' && <Star size={14} fill='#f6ad55' style={{ position: 'absolute', top: 4, left: 4 }} />}
+                    </div>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 600, opacity: isLocked ? 0.5 : 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 70 }}>
+                      {t.title}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-        </Card>
+        ))}
+      </div>
 
-        <Card>
-          <h3 style={{ marginTop: 0 }}>🕘 Recent activity</h3>
-          {recent.length === 0
-            ? <p style={{ color: 'var(--muted)' }}>No activity yet.</p>
-            : <ul style={{ margin: 0, paddingLeft: 18 }}>
-              {recent.map((a) => (
-                <li key={a.id} style={{ fontSize: '0.9rem' }}>
-                  {a.kind} · {a.detail || a.subjectId} · +{a.xp} XP {a.total ? `(${a.correct}/${a.total})` : ''} · {new Date(a.at).toLocaleDateString()}
-                </li>
-              ))}
-            </ul>}
-          <p style={{ color: 'var(--muted)', fontSize: '0.85rem' }}>{QUESTIONS.length} practice questions across {SUBJECTS.length} subjects.</p>
+      {/* Quick stats */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12, marginTop: 20 }}>
+        <Card style={{ padding: 16, background: '#fff' }}>
+          <div style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase' }}>Streak</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>{streak} day{streak === 1 ? '' : 's'}</div>
+        </Card>
+        <Card style={{ padding: 16, background: '#fff' }}>
+          <div style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase' }}>XP</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>{totalXp}</div>
+        </Card>
+        <Card style={{ padding: 16, background: '#fff' }}>
+          <div style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase' }}>Topics</div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>{mastered}/{totalTopics}</div>
         </Card>
       </div>
     </div>
   );
+}
+
+function topicEmoji(subjectId: string): string {
+  const map: Record<string, string> = {
+    english: '📖', maths: '🔢', 'combined-science': '🧪', biology: '🌱', chemistry: '⚗️', physics: '⚡',
+    french: '🇫🇷', german: '🇩🇪', spanish: '🇪🇸', geography: '🌍', history: '🏛️', rs: '✝️',
+    sociology: '👥', art: '🎨', 'computer-science': '💻', 'food-nutrition': '🍎', 'hospitality-catering': '🍽️',
+    imedia: '📱', photography: '📸', 'design-technology': '🔧', drama: '🎭', music: '🎵',
+    'gcse-pe': '⚽', 'btec-sport': '🏉', 'business-studies': '💼', 'big-picture': '🌟',
+  };
+  return map[subjectId] || '📚';
 }
