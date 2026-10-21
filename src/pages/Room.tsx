@@ -76,7 +76,15 @@ export default function Room() {
     try {
       unsubRef.current = subscribeRoom(
         code,
-        (r) => setRoom(r),
+        (r) => {
+          if (r === null) {
+            // Doc doesn't exist (never existed, or closed while we watched it)
+            // — a stale invite link must land on a clear message, not a spinner.
+            setLoadError('That room no longer exists — it may have closed. Ask for a new code or start a fresh match.');
+          } else {
+            setRoom(r);
+          }
+        },
         (e) =>
           setLoadError(
             e.message.includes('permission') || e.message.includes('unavailable')
@@ -261,11 +269,9 @@ export default function Room() {
   }
 
   async function leave() {
-    if (room && room.status === 'lobby') {
-      await leaveLobby(room.code, myUid).catch(() => {});
-    } else if (room && amHost) {
-      await deleteRoom(room.code).catch(() => {});
-    }
+    // Navigating away unmounts this page, whose cleanup removes you from a
+    // lobby (and deletes it once empty). The host can also close a finished
+    // room explicitly with the "Close room" button on the results screen.
     navigate('/play', { replace: true });
   }
 
