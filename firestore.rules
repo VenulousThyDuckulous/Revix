@@ -1,0 +1,74 @@
+rules_version = '2';
+
+// Revix Firestore security rules.
+//
+// Trust model (see docs/multiplayer.md): match scoring is computed on
+// clients because GitHub Pages is static hosting with no server. These
+// rules therefore focus on *bounded* writes — every mutation a player can
+// make to their own profile is capped so a tampered client can't mint
+// unlimited XP or jump ranks/rating in one write.
+//
+// Deploy with:  firebase deploy --only firestore:rules
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // ---- Profiles: XP, rank, match rating, leaderboard ----
+    match /profiles/{uid} {
+      // Leaderboard needs to read everyone; profiles contain no secrets.
+      allow read: if true;
+
+      // Create: your own profile only, starting at zero XP/rating.
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.lifetimeXp == 0
+        && request.resource.data.rating <= 1100;
+
+      // Update: your own profile only, with bounded per-write changes:
+      //  - lifetimeXp may rise by at most 500 and never fall
+      //  - rating may move by at most 200 and never go negative
+      //  - wins/losses/draws/games may each rise by at most 1
+      allow update: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.lifetimeXp >= resource.data.lifetimeXp
+        && request.resource.data.lifetimeXp <= resource.data.lifetimeXp + 500
+        && request.resource.data.rating >= 0
+        && request.resource.data.rating >= resource.data.rating - 200
+        && request.resource.data.rating <= resource.data.rating + 200
+        && request.resource.data.wins <= resource.data.get('wins', 0) + 1
+        && request.resource.data.losses <= resource.data.get('losses', 0) + 1
+        && request.resource.data.draws <= resource.data.get('draws', 0) + 1
+        && request.resource.data.games <= resource.data.get('games', 0) + 1;
+
+      allow delete: if false;
+    }
+
+    // ---- Rooms: live multiplayer lobbies/matches ----
+    match /rooms/{code} {
+      // Any signed-in player can read rooms (joining needs the code).
+      allow read: if signedIn();
+
+      // Create: only your own lobby with yourself as the single player.
+      allow create: if signedIn()
+        && request.resource.data.hostId == request.auth.uid
+        && request.resource.data.status == 'lobby'
+        && request.resource.data.players.keys().hasOnly([request.auth.uid]);
+
+      // Update: any signed-in player in the room. Each client writes only
+      // its own players.{uid} entry; the host (or first client to notice)
+      // transitions status and writes results. Client-side scoring is
+      // trusted here by design — see docs/multiplayer.md.
+      allow update: if signedIn()
+        && request.auth.uid in resource.data.players.keys();
+
+      // Delete: the host can close the lobby; anyone can clear a room
+      // that has no players left.
+      allow delete: if signedIn()
+        && (resource.data.hostId == request.auth.uid
+            || resource.data.players.keys().size() == 0);
+    }
+  }
+}

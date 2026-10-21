@@ -1,0 +1,3954 @@
+[
+  {
+    "id": "english-y10-language-fiction",
+    "subject": "english",
+    "year": 10,
+    "term": null,
+    "title": "Language Paper 1: Fiction",
+    "subtopics": [
+      "Plot and structure",
+      "Narrator and viewpoint",
+      "Language imagery",
+      "Evaluation phrases"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y10-language-nonfiction",
+    "subject": "english",
+    "year": 10,
+    "term": null,
+    "title": "Language Paper 2: Non-fiction",
+    "subtopics": [
+      "Comparing viewpoints",
+      "Persuasive devices",
+      "Summarising differences",
+      "Transactional writing"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y10-modern-text",
+    "subject": "english",
+    "year": 10,
+    "term": null,
+    "title": "Modern Prose or Drama Study",
+    "subtopics": [
+      "Characters and motives",
+      "Key scenes and quotes",
+      "Themes and context",
+      "Paragraph planning (PEE/PETAL)"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y10-poetry-intro",
+    "subject": "english",
+    "year": 10,
+    "term": null,
+    "title": "Poetry Anthology Introduction",
+    "subtopics": [
+      "Annotating meaning",
+      "Poetic devices",
+      "Comparing poems",
+      "Quoting with precision"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y11-lit-revision",
+    "subject": "english",
+    "year": 11,
+    "term": null,
+    "title": "Literature Revision: Shakespeare and 19th Century",
+    "subtopics": [
+      "Plot and character recall",
+      "Theme quote banks",
+      "Context links",
+      "Timed essay plans"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y11-lang-technique",
+    "subject": "english",
+    "year": 11,
+    "term": null,
+    "title": "Language Exam Technique",
+    "subtopics": [
+      "Question-by-question timing",
+      "Model introductions",
+      "High-mark vocabulary",
+      "Proofreading checks"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y11-unseen-poetry",
+    "subject": "english",
+    "year": 11,
+    "term": null,
+    "title": "Unseen Poetry Skills",
+    "subtopics": [
+      "First-reading method",
+      "Structure and tone",
+      "Comparing unseen pairs",
+      "Conclusion sentences"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "english-y11-final-prep",
+    "subject": "english",
+    "year": 11,
+    "term": null,
+    "title": "Final Preparation and Revision",
+    "subtopics": [
+      "Past-paper routines",
+      "Common-band descriptors",
+      "Spelling and grammar",
+      "Revision timetable"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y10-number",
+    "subject": "maths",
+    "year": 10,
+    "term": null,
+    "title": "Number and Proportion",
+    "subtopics": [
+      "Fractions decimals percentages",
+      "Ratio and proportion",
+      "Standard form basics",
+      "Percentage change"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "foundation",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y10-algebra",
+    "subject": "maths",
+    "year": 10,
+    "term": null,
+    "title": "Algebra Foundations",
+    "subtopics": [
+      "Simplifying and factorising",
+      "Linear equations",
+      "Sequences and nth term",
+      "Straight-line graphs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y10-geometry",
+    "subject": "maths",
+    "year": 10,
+    "term": null,
+    "title": "Geometry and Measures",
+    "subtopics": [
+      "Angles and polygons",
+      "Area and volume",
+      "Pythagoras and basics",
+      "Transformations"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y10-higher-ext",
+    "subject": "maths",
+    "year": 10,
+    "term": null,
+    "title": "Higher Extension: Quadratics and Surds",
+    "subtopics": [
+      "Expanding triple brackets",
+      "Factorising quadratics",
+      "Surds simplification",
+      "Rearranging formulae"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "higher",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y11-higher-graphs",
+    "subject": "maths",
+    "year": 11,
+    "term": null,
+    "title": "Higher Algebra and Graphs",
+    "subtopics": [
+      "Quadratic graphs",
+      "Simultaneous equations",
+      "Inequalities regions",
+      "Iteration and proof"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "higher",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y11-geometry-problem",
+    "subject": "maths",
+    "year": 11,
+    "term": null,
+    "title": "Geometry Problem Solving",
+    "subtopics": [
+      "Trigonometry SOHCAHTOA",
+      "Circle theorems intro",
+      "Vectors basics",
+      "Compound measures"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y11-exam-technique",
+    "subject": "maths",
+    "year": 11,
+    "term": null,
+    "title": "Exam Technique and Revision",
+    "subtopics": [
+      "Command words",
+      "Show-that methods",
+      "Calculator checks",
+      "Past-paper sets"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "maths-y11-number-revision",
+    "subject": "maths",
+    "year": 11,
+    "term": null,
+    "title": "Number Revision and Calculator Skills",
+    "subtopics": [
+      "Estimation and bounds",
+      "Compound interest",
+      "Reverse percentages",
+      "Standard-form calculations"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "foundation",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "combined-science-y10-bio-cells",
+    "subject": "combined-science",
+    "year": 10,
+    "term": null,
+    "title": "Cell Biology and Organisation",
+    "subtopics": [
+      "Cell structures",
+      "Mitosis and stem cells",
+      "Digestive enzymes",
+      "Heart and circulation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: microscopy and osmosis style tasks",
+    "url": null
+  },
+  {
+    "id": "combined-science-y10-chem-matter",
+    "subject": "combined-science",
+    "year": 10,
+    "term": null,
+    "title": "Matter and Reactions",
+    "subtopics": [
+      "Atomic structure",
+      "Periodic table trends",
+      "Bonding basics",
+      "Acids and electrolysis"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: making salts and electrolysis",
+    "url": null
+  },
+  {
+    "id": "combined-science-y10-phys-energy",
+    "subject": "combined-science",
+    "year": 10,
+    "term": null,
+    "title": "Energy and Electricity",
+    "subtopics": [
+      "Energy stores",
+      "Circuits and resistance",
+      "Mains power calculations",
+      "Density practical"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: resistance and density",
+    "url": null
+  },
+  {
+    "id": "combined-science-y10-bio-disease",
+    "subject": "combined-science",
+    "year": 10,
+    "term": null,
+    "title": "Infection and Bioenergetics",
+    "subtopics": [
+      "Pathogens and defences",
+      "Photosynthesis factors",
+      "Respiration equations",
+      "Reaction time"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: photosynthesis and reaction time",
+    "url": null
+  },
+  {
+    "id": "combined-science-y11-revision-bio",
+    "subject": "combined-science",
+    "year": 11,
+    "term": null,
+    "title": "Biology Paper Revision",
+    "subtopics": [
+      "Homeostasis recap",
+      "Inheritance and selection",
+      "Ecology sampling",
+      "Interpreting graphs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: field sampling recap",
+    "url": null
+  },
+  {
+    "id": "combined-science-y11-revision-chem",
+    "subject": "combined-science",
+    "year": 11,
+    "term": null,
+    "title": "Chemistry Paper Revision",
+    "subtopics": [
+      "Rates and equilibrium",
+      "Organic intro",
+      "Chemical analysis tests",
+      "Atmosphere and resources"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: rates and chromatography recap",
+    "url": null
+  },
+  {
+    "id": "combined-science-y11-revision-phys",
+    "subject": "combined-science",
+    "year": 11,
+    "term": null,
+    "title": "Physics Paper Revision",
+    "subtopics": [
+      "Forces and motion equations",
+      "Waves and EM spectrum",
+      "Magnetism recap",
+      "Space and pressure"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: waves and forces recap",
+    "url": null
+  },
+  {
+    "id": "combined-science-y11-exam-skills",
+    "subject": "combined-science",
+    "year": 11,
+    "term": null,
+    "title": "Science Exam Skills",
+    "subtopics": [
+      "Six-mark extended answers",
+      "Maths in science",
+      "Required-practical questions",
+      "Command-word routines"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "biology-y10-cells",
+    "subject": "biology",
+    "year": 10,
+    "term": null,
+    "title": "Cells and Microscopy",
+    "subtopics": [
+      "Eukaryotes and prokaryotes",
+      "Microscopy calculations",
+      "Mitosis stages",
+      "Stem cells debate"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: preparing slides and magnification",
+    "url": null
+  },
+  {
+    "id": "biology-y10-organisation",
+    "subject": "biology",
+    "year": 10,
+    "term": null,
+    "title": "Organisation and Systems",
+    "subtopics": [
+      "Enzymes and pH",
+      "Heart and vessels",
+      "Lungs and gas exchange",
+      "Plant tissues"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: food tests and enzymes",
+    "url": null
+  },
+  {
+    "id": "biology-y10-infection",
+    "subject": "biology",
+    "year": 10,
+    "term": null,
+    "title": "Infection and Response",
+    "subtopics": [
+      "Bacterial and viral disease",
+      "Antibiotics and vaccines",
+      "Monoclonal antibodies",
+      "Plant defences"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "biology-y10-bioenergetics",
+    "subject": "biology",
+    "year": 10,
+    "term": null,
+    "title": "Bioenergetics",
+    "subtopics": [
+      "Photosynthesis method",
+      "Limiting factors",
+      "Aerobic respiration",
+      "Anaerobic response"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: photosynthesis rate",
+    "url": null
+  },
+  {
+    "id": "biology-y11-homeostasis",
+    "subject": "biology",
+    "year": 11,
+    "term": null,
+    "title": "Homeostasis and Response",
+    "subtopics": [
+      "Nervous system reflexes",
+      "Hormones and glucose",
+      "Kidney and dialysis",
+      "Contraception methods"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: reaction time and plant hormones",
+    "url": null
+  },
+  {
+    "id": "biology-y11-inheritance",
+    "subject": "biology",
+    "year": 11,
+    "term": null,
+    "title": "Inheritance and Evolution",
+    "subtopics": [
+      "DNA and Punnett squares",
+      "Cystic fibrosis pedigree",
+      "Natural selection",
+      "Classification recap"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "biology-y11-ecology",
+    "subject": "biology",
+    "year": 11,
+    "term": null,
+    "title": "Ecology and Fieldwork",
+    "subtopics": [
+      "Quadrats and transects",
+      "Biodiversity threats",
+      "Carbon and water cycles",
+      "Food security"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: field sampling techniques",
+    "url": null
+  },
+  {
+    "id": "biology-y11-exam-consol",
+    "subject": "biology",
+    "year": 11,
+    "term": null,
+    "title": "Biology Consolidation",
+    "subtopics": [
+      "Paper 1 and 2 recap",
+      "Data-analysis questions",
+      "Extended writing frames",
+      "Revision of key diagrams"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "chemistry-y10-atomic",
+    "subject": "chemistry",
+    "year": 10,
+    "term": null,
+    "title": "Atomic Structure and Bonding",
+    "subtopics": [
+      "Isotopes and electrons",
+      "Ionic dot-cross",
+      "Covalent structures",
+      "Metallic properties"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "chemistry-y10-periodic",
+    "subject": "chemistry",
+    "year": 10,
+    "term": null,
+    "title": "Periodic Table and Reactivity",
+    "subtopics": [
+      "Group 1 and 7 trends",
+      "Transition metals",
+      "Reactivity series",
+      "Displacement reactions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "chemistry-y10-quantitative",
+    "subject": "chemistry",
+    "year": 10,
+    "term": null,
+    "title": "Quantitative Chemistry",
+    "subtopics": [
+      "Moles basics",
+      "Concentration solutions",
+      "Titration method",
+      "Gas volumes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: titration and salt preparation",
+    "url": null
+  },
+  {
+    "id": "chemistry-y10-changes",
+    "subject": "chemistry",
+    "year": 10,
+    "term": null,
+    "title": "Chemical Changes",
+    "subtopics": [
+      "Acids and pH scale",
+      "Electrolysis products",
+      "Exothermic profiles",
+      "Reversible reactions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: electrolysis observations",
+    "url": null
+  },
+  {
+    "id": "chemistry-y11-rates",
+    "subject": "chemistry",
+    "year": 11,
+    "term": null,
+    "title": "Rates and Equilibrium",
+    "subtopics": [
+      "Rate graphs",
+      "Collision theory",
+      "Le Chatelier",
+      "Reversible processes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: rates of reaction",
+    "url": null
+  },
+  {
+    "id": "chemistry-y11-organic",
+    "subject": "chemistry",
+    "year": 11,
+    "term": null,
+    "title": "Organic Chemistry Intro",
+    "subtopics": [
+      "Alkanes and alkenes",
+      "Cracking tests",
+      "Alcohols and acids",
+      "Polymers recap"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "chemistry-y11-analysis",
+    "subject": "chemistry",
+    "year": 11,
+    "term": null,
+    "title": "Analysis and Resources",
+    "subtopics": [
+      "Flame and ion tests",
+      "Chromatography method",
+      "Water treatment",
+      "Recycling metals"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: chromatography and ion tests",
+    "url": null
+  },
+  {
+    "id": "chemistry-y11-chem-consol",
+    "subject": "chemistry",
+    "year": 11,
+    "term": null,
+    "title": "Chemistry Consolidation",
+    "subtopics": [
+      "Calculation drills",
+      "Paper-technique practice",
+      "Common misconceptions",
+      "Formula recall"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "physics-y10-energy",
+    "subject": "physics",
+    "year": 10,
+    "term": null,
+    "title": "Energy and Power",
+    "subtopics": [
+      "Kinetic and potential",
+      "Efficiency calculations",
+      "Renewable comparison",
+      "Thermal insulation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: specific heat capacity",
+    "url": null
+  },
+  {
+    "id": "physics-y10-electricity",
+    "subject": "physics",
+    "year": 10,
+    "term": null,
+    "title": "Electricity and Circuits",
+    "subtopics": [
+      "Series and parallel",
+      "Resistance factors",
+      "Power equations",
+      "Fuses and safety"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: resistance in wires",
+    "url": null
+  },
+  {
+    "id": "physics-y10-particles",
+    "subject": "physics",
+    "year": 10,
+    "term": null,
+    "title": "Particles and Radiation",
+    "subtopics": [
+      "Density states",
+      "Internal energy",
+      "Half-life basics",
+      "Background radiation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: density of solids",
+    "url": null
+  },
+  {
+    "id": "physics-y10-forces",
+    "subject": "physics",
+    "year": 10,
+    "term": null,
+    "title": "Forces and Motion",
+    "subtopics": [
+      "Resultant forces",
+      "Speed-time graphs",
+      "Stopping distances",
+      "Hooke's law"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: force and extension",
+    "url": null
+  },
+  {
+    "id": "physics-y11-waves",
+    "subject": "physics",
+    "year": 11,
+    "term": null,
+    "title": "Waves and EM Spectrum",
+    "subtopics": [
+      "Wave equation",
+      "Reflection refraction",
+      "Uses and harms of EM",
+      "Sound and ultrasound"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Required practical: waves on a string",
+    "url": null
+  },
+  {
+    "id": "physics-y11-forces2",
+    "subject": "physics",
+    "year": 11,
+    "term": null,
+    "title": "Advanced Forces",
+    "subtopics": [
+      "Moments and gears",
+      "Pressure in fluids",
+      "Momentum basics",
+      "Circular ideas"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "physics-y11-magnetism",
+    "subject": "physics",
+    "year": 11,
+    "term": null,
+    "title": "Magnetism and Space",
+    "subtopics": [
+      "Magnetic fields",
+      "Motor effect",
+      "Induced current",
+      "Solar system recap"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "physics-y11-phys-consol",
+    "subject": "physics",
+    "year": 11,
+    "term": null,
+    "title": "Physics Consolidation",
+    "subtopics": [
+      "Equation recall drills",
+      "Multi-step calculations",
+      "Graph skills",
+      "Paper walkthroughs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y10-self-life",
+    "subject": "french",
+    "year": 10,
+    "term": null,
+    "title": "Me, Family and Free Time",
+    "subtopics": [
+      "Describing people",
+      "Hobbies and weekends",
+      "Daily routine",
+      "Opinions with reasons"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y10-school-future",
+    "subject": "french",
+    "year": 10,
+    "term": null,
+    "title": "School and Future Plans",
+    "subtopics": [
+      "Subjects and teachers",
+      "School rules",
+      "Jobs and ambitions",
+      "Conditional plans"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y10-food-travel",
+    "subject": "french",
+    "year": 10,
+    "term": null,
+    "title": "Food, Travel and Culture",
+    "subtopics": [
+      "Ordering food",
+      "Holiday past tense",
+      "French festivals",
+      "Hotel role-plays"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y10-grammar-core",
+    "subject": "french",
+    "year": 10,
+    "term": null,
+    "title": "Core Grammar",
+    "subtopics": [
+      "Present and perfect",
+      "Near future",
+      "Adjectives agreement",
+      "Negatives and questions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y11-social-world",
+    "subject": "french",
+    "year": 11,
+    "term": null,
+    "title": "Social and Global Issues",
+    "subtopics": [
+      "Environment vocab",
+      "Volunteering",
+      "Healthy living",
+      "Technology pros-cons"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y11-exam-speaking",
+    "subject": "french",
+    "year": 11,
+    "term": null,
+    "title": "Speaking Exam Preparation",
+    "subtopics": [
+      "Photo-card routine",
+      "General conversation",
+      "Complex sentences",
+      "Pronunciation drills"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y11-exam-writing",
+    "subject": "french",
+    "year": 11,
+    "term": null,
+    "title": "Writing Exam Technique",
+    "subtopics": [
+      "90-word tasks",
+      "150-word structure",
+      "Translation practice",
+      "High-grade phrases"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "french-y11-revision-listening",
+    "subject": "french",
+    "year": 11,
+    "term": null,
+    "title": "Listening and Reading Revision",
+    "subtopics": [
+      "Past-paper tactics",
+      "False friends",
+      "Inference skills",
+      "Vocabulary sprints"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y10-self-life",
+    "subject": "german",
+    "year": 10,
+    "term": null,
+    "title": "Me, Family and Free Time",
+    "subtopics": [
+      "Family descriptions",
+      "Leisure activities",
+      "Daily routine",
+      "Justifying opinions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y10-school-future",
+    "subject": "german",
+    "year": 10,
+    "term": null,
+    "title": "School and Future Plans",
+    "subtopics": [
+      "School subjects",
+      "Rules and uniform",
+      "Career ideas",
+      "Work experience"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y10-food-travel",
+    "subject": "german",
+    "year": 10,
+    "term": null,
+    "title": "Food, Travel and Culture",
+    "subtopics": [
+      "Restaurant phrases",
+      "Holiday accounts",
+      "German traditions",
+      "Directions and transport"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y10-grammar-core",
+    "subject": "german",
+    "year": 10,
+    "term": null,
+    "title": "Core Grammar",
+    "subtopics": [
+      "Present and perfect",
+      "Word order rules",
+      "Cases intro",
+      "Modal verbs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y11-social-world",
+    "subject": "german",
+    "year": 11,
+    "term": null,
+    "title": "Social and Global Issues",
+    "subtopics": [
+      "Environment actions",
+      "Health choices",
+      "Media habits",
+      "Community life"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y11-exam-speaking",
+    "subject": "german",
+    "year": 11,
+    "term": null,
+    "title": "Speaking Exam Preparation",
+    "subtopics": [
+      "Photo-card answers",
+      "Conversation topics",
+      "Longer sentences",
+      "Fluency practice"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y11-exam-writing",
+    "subject": "german",
+    "year": 11,
+    "term": null,
+    "title": "Writing Exam Technique",
+    "subtopics": [
+      "Short and long tasks",
+      "Translation into German",
+      "Linking words",
+      "Grade-8 phrases"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "german-y11-revision-listening",
+    "subject": "german",
+    "year": 11,
+    "term": null,
+    "title": "Listening and Reading Revision",
+    "subtopics": [
+      "Exam rubrics",
+      "Skimming scans",
+      "Synonym spotting",
+      "Vocab consolidation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y10-self-life",
+    "subject": "spanish",
+    "year": 10,
+    "term": null,
+    "title": "Me, Family and Free Time",
+    "subtopics": [
+      "Family and friends",
+      "Hobbies and sport",
+      "Daily routine",
+      "Giving opinions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y10-school-future",
+    "subject": "spanish",
+    "year": 10,
+    "term": null,
+    "title": "School and Future Plans",
+    "subtopics": [
+      "School life",
+      "Rules and pressures",
+      "Job ambitions",
+      "Future tense plans"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y10-food-travel",
+    "subject": "spanish",
+    "year": 10,
+    "term": null,
+    "title": "Food, Travel and Culture",
+    "subtopics": [
+      "Eating out",
+      "Holiday stories",
+      "Spanish festivals",
+      "Travel problems"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y10-grammar-core",
+    "subject": "spanish",
+    "year": 10,
+    "term": null,
+    "title": "Core Grammar",
+    "subtopics": [
+      "Present and preterite",
+      "Near future",
+      "Ser vs estar",
+      "Comparatives"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y11-social-world",
+    "subject": "spanish",
+    "year": 11,
+    "term": null,
+    "title": "Social and Global Issues",
+    "subtopics": [
+      "Environment pledges",
+      "Healthy lifestyle",
+      "Social media",
+      "Local community"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y11-exam-speaking",
+    "subject": "spanish",
+    "year": 11,
+    "term": null,
+    "title": "Speaking Exam Preparation",
+    "subtopics": [
+      "Photo descriptions",
+      "Conversation practice",
+      "Complex opinions",
+      "Pronunciation focus"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y11-exam-writing",
+    "subject": "spanish",
+    "year": 11,
+    "term": null,
+    "title": "Writing Exam Technique",
+    "subtopics": [
+      "Structured paragraphs",
+      "Translation drills",
+      "Subjunctive phrases",
+      "Checking accuracy"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "spanish-y11-revision-listening",
+    "subject": "spanish",
+    "year": 11,
+    "term": null,
+    "title": "Listening and Reading Revision",
+    "subtopics": [
+      "Tricky distractors",
+      "Numbers and time",
+      "Reading strategies",
+      "Theme vocabulary"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "geography-y10-tectonics",
+    "subject": "geography",
+    "year": 10,
+    "term": null,
+    "title": "Tectonic Hazards",
+    "subtopics": [
+      "Plate boundaries",
+      "Earthquake case study",
+      "Volcano responses",
+      "Hazard management"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "geography-y10-weather-climate",
+    "subject": "geography",
+    "year": 10,
+    "term": null,
+    "title": "Weather and Climate",
+    "subtopics": [
+      "UK weather systems",
+      "Tropical storms",
+      "Climate change causes",
+      "Adaptation strategies"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "geography-y10-urban",
+    "subject": "geography",
+    "year": 10,
+    "term": null,
+    "title": "Urban Growth",
+    "subtopics": [
+      "Megacity growth",
+      "UK city case study",
+      "Sustainability plans",
+      "Traffic management"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "geography-y10-rivers-coasts",
+    "subject": "geography",
+    "year": 10,
+    "term": null,
+    "title": "Rivers and Coasts",
+    "subtopics": [
+      "Erosion landforms",
+      "Flood hydrographs",
+      "Coastal defences",
+      "Fieldwork methods"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Fieldwork: river or coast measurements write-up",
+    "url": null
+  },
+  {
+    "id": "geography-y11-ecosystems",
+    "subject": "geography",
+    "year": 11,
+    "term": null,
+    "title": "Ecosystems and Biomes",
+    "subtopics": [
+      "Rainforest layers",
+      "Desert adaptations",
+      "Deforestation debate",
+      "Conservation actions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "geography-y11-development",
+    "subject": "geography",
+    "year": 11,
+    "term": null,
+    "title": "Development and Resources",
+    "subtopics": [
+      "Development indicators",
+      "Uneven development",
+      "Aid and trade",
+      "Energy choices"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "geography-y11-fieldwork",
+    "subject": "geography",
+    "year": 11,
+    "term": null,
+    "title": "Fieldwork and Enquiry",
+    "subtopics": [
+      "Hypothesis framing",
+      "Data presentation",
+      "Statistical basics",
+      "Evaluation writing"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Fieldwork: presenting and evaluating primary data",
+    "url": null
+  },
+  {
+    "id": "geography-y11-exam-prep",
+    "subject": "geography",
+    "year": 11,
+    "term": null,
+    "title": "Geography Exam Preparation",
+    "subtopics": [
+      "Case-study recall",
+      "9-mark structure",
+      "Map and photo skills",
+      "Timed papers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y10-medicine",
+    "subject": "history",
+    "year": 10,
+    "term": null,
+    "title": "Medicine Through Time",
+    "subtopics": [
+      "Medieval treatments",
+      "Renaissance change",
+      "Germ theory",
+      "NHS and modern care"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y10-germany",
+    "subject": "history",
+    "year": 10,
+    "term": null,
+    "title": "Germany 1918 to 1945",
+    "subtopics": [
+      "Weimar problems",
+      "Nazi rise to power",
+      "Life under Nazis",
+      "Road to war"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y10-power",
+    "subject": "history",
+    "year": 10,
+    "term": null,
+    "title": "Power and Protest",
+    "subtopics": [
+      "Voting reform",
+      "Protest case studies",
+      "Civil rights links",
+      "Source usefulness"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y10-skills",
+    "subject": "history",
+    "year": 10,
+    "term": null,
+    "title": "Historical Skills",
+    "subtopics": [
+      "Chronology and change",
+      "Causation chains",
+      "Source inference",
+      "Essay paragraphs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y11-conflict",
+    "subject": "history",
+    "year": 11,
+    "term": null,
+    "title": "Conflict Case Study",
+    "subtopics": [
+      "Treaty tensions",
+      "Cold War crises",
+      "Peace efforts",
+      "Historian views"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y11-thematic-review",
+    "subject": "history",
+    "year": 11,
+    "term": null,
+    "title": "Thematic Review",
+    "subtopics": [
+      "Continuity and change",
+      "Factor comparison",
+      "Timeline recall",
+      "Key individuals"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y11-source-exam",
+    "subject": "history",
+    "year": 11,
+    "term": null,
+    "title": "Source and Interpretation Skills",
+    "subtopics": [
+      "How-far questions",
+      "Bias and provenance",
+      "Comparing views",
+      "Model answers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "history-y11-final-revision",
+    "subject": "history",
+    "year": 11,
+    "term": null,
+    "title": "Final Revision",
+    "subtopics": [
+      "Topic mind maps",
+      "Question planning",
+      "Timed essays",
+      "Walking-talk mocks"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y10-beliefs",
+    "subject": "rs",
+    "year": 10,
+    "term": null,
+    "title": "Beliefs and Teachings",
+    "subtopics": [
+      "Nature of God",
+      "Creation stories",
+      "Afterlife views",
+      "Worship forms"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y10-ethics-life",
+    "subject": "rs",
+    "year": 10,
+    "term": null,
+    "title": "Life Ethics",
+    "subtopics": [
+      "Sanctity of life",
+      "Abortion debate",
+      "Euthanasia views",
+      "Capital punishment"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y10-relationships",
+    "subject": "rs",
+    "year": 10,
+    "term": null,
+    "title": "Relationships and Family",
+    "subtopics": [
+      "Marriage purpose",
+      "Roles and equality",
+      "Divorce attitudes",
+      "Family prayer"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y10-study-skills",
+    "subject": "rs",
+    "year": 10,
+    "term": null,
+    "title": "Scripture and Study Skills",
+    "subtopics": [
+      "Quoting sacred texts",
+      "Contrasting believers",
+      "12-mark structure",
+      "Key vocabulary"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y11-peace-conflict",
+    "subject": "rs",
+    "year": 11,
+    "term": null,
+    "title": "Peace and Conflict",
+    "subtopics": [
+      "Just war theory",
+      "Pacifism",
+      "Terrorism responses",
+      "Forgiveness work"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y11-crime",
+    "subject": "rs",
+    "year": 11,
+    "term": null,
+    "title": "Crime and Punishment",
+    "subtopics": [
+      "Aims of punishment",
+      "Prison reform",
+      "Forgiveness cases",
+      "Deterrence debate"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y11-dialogue",
+    "subject": "rs",
+    "year": 11,
+    "term": null,
+    "title": "Dialogue and Issues",
+    "subtopics": [
+      "Interfaith work",
+      "Secular views",
+      "Conscience choices",
+      "Moral authorities"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "rs-y11-exam-consol",
+    "subject": "rs",
+    "year": 11,
+    "term": null,
+    "title": "RS Consolidation",
+    "subtopics": [
+      "Theme quote banks",
+      "Evaluation chains",
+      "Timed 12-markers",
+      "Revision cards"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y10-theory-methods",
+    "subject": "sociology",
+    "year": 10,
+    "term": null,
+    "title": "Theory and Methods",
+    "subtopics": [
+      "Functionalism vs Marxism",
+      "Primary data",
+      "Sampling methods",
+      "Ethics in research"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Mini-research: questionnaire design task",
+    "url": null
+  },
+  {
+    "id": "sociology-y10-families",
+    "subject": "sociology",
+    "year": 10,
+    "term": null,
+    "title": "Families and Households",
+    "subtopics": [
+      "Family diversity",
+      "Changing roles",
+      "Marriage trends",
+      "Childhood study"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y10-education",
+    "subject": "sociology",
+    "year": 10,
+    "term": null,
+    "title": "Education",
+    "subtopics": [
+      "Class and achievement",
+      "Gender gaps",
+      "Ethnicity patterns",
+      "School processes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y10-crime-intro",
+    "subject": "sociology",
+    "year": 10,
+    "term": null,
+    "title": "Crime Introduction",
+    "subtopics": [
+      "Measuring crime",
+      "Victim surveys",
+      "Class patterns",
+      "Media and crime"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y11-crime-deep",
+    "subject": "sociology",
+    "year": 11,
+    "term": null,
+    "title": "Crime and Deviance",
+    "subtopics": [
+      "Theories of crime",
+      "Punishment aims",
+      "Youth crime",
+      "Prevention policies"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y11-stratification",
+    "subject": "sociology",
+    "year": 11,
+    "term": null,
+    "title": "Social Stratification",
+    "subtopics": [
+      "Class measurement",
+      "Poverty causes",
+      "Welfare debate",
+      "Power and elites"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y11-research-review",
+    "subject": "sociology",
+    "year": 11,
+    "term": null,
+    "title": "Research Methods Review",
+    "subtopics": [
+      "Interviews vs surveys",
+      "Experiments",
+      "Longitudinal studies",
+      "Method evaluation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "sociology-y11-exam-prep",
+    "subject": "sociology",
+    "year": 11,
+    "term": null,
+    "title": "Sociology Exam Preparation",
+    "subtopics": [
+      "Item-based answers",
+      "12-mark essays",
+      "Sociologist names",
+      "Timed practice"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "art-y10-skills",
+    "subject": "art",
+    "year": 10,
+    "term": null,
+    "title": "Observational Skills",
+    "subtopics": [
+      "Line and tone",
+      "Colour mixing",
+      "Mark making",
+      "Scale drawing"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Studio: sketchbook presentation routines",
+    "url": null
+  },
+  {
+    "id": "art-y10-artists",
+    "subject": "art",
+    "year": 10,
+    "term": null,
+    "title": "Artist Research",
+    "subtopics": [
+      "Mind-map analysis",
+      "Copying techniques",
+      "Comparing artists",
+      "Presenting pages"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "art-y10-materials",
+    "subject": "art",
+    "year": 10,
+    "term": null,
+    "title": "Materials and Processes",
+    "subtopics": [
+      "Paint and ink",
+      "Printmaking basics",
+      "Mixed media",
+      "Photography use"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Workshop: safe use of tools and materials",
+    "url": null
+  },
+  {
+    "id": "art-y10-theme-project",
+    "subject": "art",
+    "year": 10,
+    "term": null,
+    "title": "Theme Project",
+    "subtopics": [
+      "Idea development",
+      "Composition trials",
+      "Refinement steps",
+      "Final piece plan"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "art-y11-portfolio",
+    "subject": "art",
+    "year": 11,
+    "term": null,
+    "title": "Portfolio Refinement",
+    "subtopics": [
+      "Selecting best work",
+      "Improving outcomes",
+      "Annotation depth",
+      "Meeting criteria"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "art-y11-externally-set",
+    "subject": "art",
+    "year": 11,
+    "term": null,
+    "title": "Externally Set Task",
+    "subtopics": [
+      "Interpreting brief",
+      "Artist links",
+      "Development journey",
+      "10-hour planning"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Exam: timed final-piece preparation",
+    "url": null
+  },
+  {
+    "id": "art-y11-evaluation",
+    "subject": "art",
+    "year": 11,
+    "term": null,
+    "title": "Evaluation Skills",
+    "subtopics": [
+      "Reviewing progress",
+      "Technical vocabulary",
+      "Peer feedback",
+      "Presentation finish"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "art-y11-exam-show",
+    "subject": "art",
+    "year": 11,
+    "term": null,
+    "title": "Show and Exam Technique",
+    "subtopics": [
+      "Mounting work",
+      "Photographing pieces",
+      "Time management",
+      "Checklist review"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "computer-science-y10-systems",
+    "subject": "computer-science",
+    "year": 10,
+    "term": null,
+    "title": "Computer Systems",
+    "subtopics": [
+      "CPU fetch-execute",
+      "Memory types",
+      "Storage comparison",
+      "System software"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: hardware teardown diagrams",
+    "url": null
+  },
+  {
+    "id": "computer-science-y10-networks",
+    "subject": "computer-science",
+    "year": 10,
+    "term": null,
+    "title": "Networks and Security",
+    "subtopics": [
+      "LAN vs WAN",
+      "Protocols basics",
+      "Cyber threats",
+      "Defensive methods"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "computer-science-y10-data",
+    "subject": "computer-science",
+    "year": 10,
+    "term": null,
+    "title": "Data Representation",
+    "subtopics": [
+      "Binary conversions",
+      "Hex and characters",
+      "Image sound basics",
+      "Compression"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "computer-science-y10-python-basics",
+    "subject": "computer-science",
+    "year": 10,
+    "term": null,
+    "title": "Programming Basics",
+    "subtopics": [
+      "Variables loops",
+      "Selection logic",
+      "Subroutines",
+      "Testing programs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Programming: small Python tasks portfolio",
+    "url": null
+  },
+  {
+    "id": "computer-science-y11-algorithms",
+    "subject": "computer-science",
+    "year": 11,
+    "term": null,
+    "title": "Algorithms and Logic",
+    "subtopics": [
+      "Pseudocode",
+      "Flowcharts",
+      "Searching sorting",
+      "Trace tables"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "computer-science-y11-python-project",
+    "subject": "computer-science",
+    "year": 11,
+    "term": null,
+    "title": "Programming Project",
+    "subtopics": [
+      "Decomposition",
+      "Robust coding",
+      "File handling",
+      "Evaluation write-up"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Programming: extended project practice",
+    "url": null
+  },
+  {
+    "id": "computer-science-y11-issues",
+    "subject": "computer-science",
+    "year": 11,
+    "term": null,
+    "title": "Impacts and Issues",
+    "subtopics": [
+      "Privacy ethics",
+      "Environmental costs",
+      "Legislation basics",
+      "Open-source debate"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "computer-science-y11-exam-consol",
+    "subject": "computer-science",
+    "year": 11,
+    "term": null,
+    "title": "Consolidation and Exam Technique",
+    "subtopics": [
+      "Paper walkthroughs",
+      "8-mark answers",
+      "Maths skills",
+      "Revision checklists"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y10-nutrition",
+    "subject": "food-nutrition",
+    "year": 10,
+    "term": null,
+    "title": "Nutrition and Health",
+    "subtopics": [
+      "Macronutrients",
+      "Micronutrients",
+      "Eatwell guide",
+      "Energy needs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y10-science",
+    "subject": "food-nutrition",
+    "year": 10,
+    "term": null,
+    "title": "Food Science",
+    "subtopics": [
+      "Protein denaturing",
+      "Gluten and starch",
+      "Raising agents",
+      "Fat functions"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: food-science experiments write-up",
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y10-safety",
+    "subject": "food-nutrition",
+    "year": 10,
+    "term": null,
+    "title": "Safety and Hygiene",
+    "subtopics": [
+      "Bacteria control",
+      "Storage rules",
+      "Knife safety",
+      "Allergen labels"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: hygiene routine assessment",
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y10-cooking-skills",
+    "subject": "food-nutrition",
+    "year": 10,
+    "term": null,
+    "title": "Cooking Skills",
+    "subtopics": [
+      "Knife techniques",
+      "Dough work",
+      "Sauce making",
+      "Presentation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: timed skill dishes",
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y11-planning",
+    "subject": "food-nutrition",
+    "year": 11,
+    "term": null,
+    "title": "Menu and Meal Planning",
+    "subtopics": [
+      "Balanced menus",
+      "Costing dishes",
+      "Special diets",
+      "Sustainability"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y11-neaprep",
+    "subject": "food-nutrition",
+    "year": 11,
+    "term": null,
+    "title": "NEA Preparation",
+    "subtopics": [
+      "Brief analysis",
+      "Trials and tasting",
+      "Sensory testing",
+      "Time plans"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "NEA-style: trial dishes and evaluation",
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y11-commodities",
+    "subject": "food-nutrition",
+    "year": 11,
+    "term": null,
+    "title": "Commodities Study",
+    "subtopics": [
+      "Dairy and eggs",
+      "Cereals review",
+      "Meat alternatives",
+      "Seasonal foods"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "food-nutrition-y11-exam-revision",
+    "subject": "food-nutrition",
+    "year": 11,
+    "term": null,
+    "title": "Exam Revision",
+    "subtopics": [
+      "Past-paper topics",
+      "Nutrition calculations",
+      "Long-answer frames",
+      "Recall drills"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y10-industry",
+    "subject": "hospitality-catering",
+    "year": 10,
+    "term": null,
+    "title": "Hospitality Industry",
+    "subtopics": [
+      "Sectors and jobs",
+      "Hotel operations",
+      "Customer needs",
+      "Business types"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y10-safety",
+    "subject": "hospitality-catering",
+    "year": 10,
+    "term": null,
+    "title": "Food Safety",
+    "subtopics": [
+      "HACCP basics",
+      "Temperature control",
+      "Cross-contamination",
+      "Cleaning schedules"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: kitchen safety checks",
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y10-nutrition-cat",
+    "subject": "hospitality-catering",
+    "year": 10,
+    "term": null,
+    "title": "Nutrition for Catering",
+    "subtopics": [
+      "Balanced diets",
+      "Allergens law",
+      "Menu labelling",
+      "Special diets"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y10-skills-cat",
+    "subject": "hospitality-catering",
+    "year": 10,
+    "term": null,
+    "title": "Catering Skills",
+    "subtopics": [
+      "Knife and prep",
+      "Cooking methods",
+      "Sauces and sides",
+      "Plating"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: skills dishes log",
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y11-menu",
+    "subject": "hospitality-catering",
+    "year": 11,
+    "term": null,
+    "title": "Menu Planning",
+    "subtopics": [
+      "Menu types",
+      "Costing portions",
+      "Seasonal planning",
+      "Event catering"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y11-nea-task",
+    "subject": "hospitality-catering",
+    "year": 11,
+    "term": null,
+    "title": "Coursework Task",
+    "subtopics": [
+      "Brief response",
+      "Dish trials",
+      "Evaluation notes",
+      "Final cook"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: timed final dishes with review",
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y11-service",
+    "subject": "hospitality-catering",
+    "year": 11,
+    "term": null,
+    "title": "Service and Standards",
+    "subtopics": [
+      "Front-of-house",
+      "Complaint handling",
+      "Quality checks",
+      "Sustainability"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "hospitality-catering-y11-exam-prep",
+    "subject": "hospitality-catering",
+    "year": 11,
+    "term": null,
+    "title": "Exam Preparation",
+    "subtopics": [
+      "Command words",
+      "Scenario questions",
+      "Nutrition maths",
+      "Mock papers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "imedia-y10-media",
+    "subject": "imedia",
+    "year": 10,
+    "term": null,
+    "title": "Media Sectors",
+    "subtopics": [
+      "Audiences purposes",
+      "Job roles",
+      "Legal constraints",
+      "Client briefs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "imedia-y10-design-doc",
+    "subject": "imedia",
+    "year": 10,
+    "term": null,
+    "title": "Pre-production Documents",
+    "subtopics": [
+      "Mood boards",
+      "Mind maps",
+      "Storyboards",
+      "Scripts"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Coursework: planning documents portfolio",
+    "url": null
+  },
+  {
+    "id": "imedia-y10-graphics",
+    "subject": "imedia",
+    "year": 10,
+    "term": null,
+    "title": "Digital Graphics",
+    "subtopics": [
+      "Image sourcing",
+      "Editing basics",
+      "Copyright rules",
+      "Export formats"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: graphics editing tasks",
+    "url": null
+  },
+  {
+    "id": "imedia-y10-planning",
+    "subject": "imedia",
+    "year": 10,
+    "term": null,
+    "title": "Project Planning",
+    "subtopics": [
+      "Time plans",
+      "Assets lists",
+      "Hardware needs",
+      "Review cycles"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "imedia-y11-interactive",
+    "subject": "imedia",
+    "year": 11,
+    "term": null,
+    "title": "Interactive Products",
+    "subtopics": [
+      "Navigation design",
+      "Accessibility",
+      "Testing users",
+      "House style"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "imedia-y11-coursework",
+    "subject": "imedia",
+    "year": 11,
+    "term": null,
+    "title": "Coursework Completion",
+    "subtopics": [
+      "Meeting the brief",
+      "Justifying choices",
+      "Version control",
+      "Evaluation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Coursework: final product and review",
+    "url": null
+  },
+  {
+    "id": "imedia-y11-exam-unit",
+    "subject": "imedia",
+    "year": 11,
+    "term": null,
+    "title": "Exam Unit Revision",
+    "subtopics": [
+      "Media codes",
+      "Audience theory",
+      "Planning questions",
+      "Mock briefs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "imedia-y11-skills-finish",
+    "subject": "imedia",
+    "year": 11,
+    "term": null,
+    "title": "Skills Finish",
+    "subtopics": [
+      "File management",
+      "Quality checks",
+      "Presentation",
+      "Resubmission fixes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "photography-y10-camera",
+    "subject": "photography",
+    "year": 10,
+    "term": null,
+    "title": "Camera Craft",
+    "subtopics": [
+      "Exposure triangle",
+      "Focus modes",
+      "White balance",
+      "Lens choices"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: manual-settings photo shoots",
+    "url": null
+  },
+  {
+    "id": "photography-y10-composition",
+    "subject": "photography",
+    "year": 10,
+    "term": null,
+    "title": "Composition",
+    "subtopics": [
+      "Rule of thirds",
+      "Leading lines",
+      "Viewpoints",
+      "Lighting basics"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "photography-y10-photographers",
+    "subject": "photography",
+    "year": 10,
+    "term": null,
+    "title": "Photographer Research",
+    "subtopics": [
+      "Analysis pages",
+      "Style emulation",
+      "Contact sheets",
+      "Annotation"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Shoot: location visit with contact sheet",
+    "url": null
+  },
+  {
+    "id": "photography-y10-editing",
+    "subject": "photography",
+    "year": 10,
+    "term": null,
+    "title": "Editing Basics",
+    "subtopics": [
+      "Cropping straightening",
+      "Exposure tweaks",
+      "Black-and-white",
+      "Ethical edits"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: editing workflow log",
+    "url": null
+  },
+  {
+    "id": "photography-y11-project",
+    "subject": "photography",
+    "year": 11,
+    "term": null,
+    "title": "Personal Project",
+    "subtopics": [
+      "Theme choice",
+      "Development arc",
+      "Best-shot curation",
+      "Artist links"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "photography-y11-externally-set",
+    "subject": "photography",
+    "year": 11,
+    "term": null,
+    "title": "Externally Set Task",
+    "subtopics": [
+      "Brief ideas",
+      "Sustained shoots",
+      "Refinement",
+      "Final prints"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Exam: timed final-shoot preparation",
+    "url": null
+  },
+  {
+    "id": "photography-y11-presentation",
+    "subject": "photography",
+    "year": 11,
+    "term": null,
+    "title": "Presentation Skills",
+    "subtopics": [
+      "Mounting prints",
+      "Digital portfolios",
+      "Sequencing work",
+      "Artist statements"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "photography-y11-exam-review",
+    "subject": "photography",
+    "year": 11,
+    "term": null,
+    "title": "Review and Exam Technique",
+    "subtopics": [
+      "Criteria checks",
+      "Improving weak areas",
+      "Time planning",
+      "Final checklist"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "design-technology-y10-materials",
+    "subject": "design-technology",
+    "year": 10,
+    "term": null,
+    "title": "Materials and Properties",
+    "subtopics": [
+      "Timbers and boards",
+      "Metals and plastics",
+      "Composites",
+      "Stock forms"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Workshop: safe tool use and joins",
+    "url": null
+  },
+  {
+    "id": "design-technology-y10-processes",
+    "subject": "design-technology",
+    "year": 10,
+    "term": null,
+    "title": "Making Processes",
+    "subtopics": [
+      "Cutting shaping",
+      "Joining methods",
+      "Finishes",
+      "Tolerances"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: skills joints and samples",
+    "url": null
+  },
+  {
+    "id": "design-technology-y10-design",
+    "subject": "design-technology",
+    "year": 10,
+    "term": null,
+    "title": "Design Skills",
+    "subtopics": [
+      "Brief analysis",
+      "Sketching ideas",
+      "Modelling prototypes",
+      "Evaluating"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "design-technology-y10-systems",
+    "subject": "design-technology",
+    "year": 10,
+    "term": null,
+    "title": "Mechanisms and Systems",
+    "subtopics": [
+      "Levers gears",
+      "Circuits basics",
+      "CAD intro",
+      "Net-zero design"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "design-technology-y11-nea",
+    "subject": "design-technology",
+    "year": 11,
+    "term": null,
+    "title": "NEA Project",
+    "subtopics": [
+      "Research users",
+      "Iterative design",
+      "Making evidence",
+      "Testing review"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "NEA: sustained design-and-make folder",
+    "url": null
+  },
+  {
+    "id": "design-technology-y11-theory",
+    "subject": "design-technology",
+    "year": 11,
+    "term": null,
+    "title": "Theory Consolidation",
+    "subtopics": [
+      "Material maths",
+      "Forces recap",
+      "Manufacturing",
+      "Sustainability"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "design-technology-y11-drawing",
+    "subject": "design-technology",
+    "year": 11,
+    "term": null,
+    "title": "Technical Drawing",
+    "subtopics": [
+      "Orthographic basics",
+      "Isometric sketch",
+      "Dimensioning",
+      "CAD output"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "design-technology-y11-exam-prep",
+    "subject": "design-technology",
+    "year": 11,
+    "term": null,
+    "title": "Exam Preparation",
+    "subtopics": [
+      "Maths in DT",
+      "Long-answer frames",
+      "Mock walkthroughs",
+      "Recall cards"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "drama-y10-skills-perf",
+    "subject": "drama",
+    "year": 10,
+    "term": null,
+    "title": "Performance Skills",
+    "subtopics": [
+      "Voice projection",
+      "Movement character",
+      "Status and space",
+      "Ensemble work"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: rehearsal and performance log",
+    "url": null
+  },
+  {
+    "id": "drama-y10-practitioners",
+    "subject": "drama",
+    "year": 10,
+    "term": null,
+    "title": "Practitioners",
+    "subtopics": [
+      "Stanislavski basics",
+      "Brecht techniques",
+      "Frantic Assembly",
+      "Directing choices"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "drama-y10-devising",
+    "subject": "drama",
+    "year": 10,
+    "term": null,
+    "title": "Devising Theatre",
+    "subtopics": [
+      "Stimulus response",
+      "Structuring scenes",
+      "Contrasts climax",
+      "Portfolio notes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Devising: group piece with log",
+    "url": null
+  },
+  {
+    "id": "drama-y10-texts",
+    "subject": "drama",
+    "year": 10,
+    "term": null,
+    "title": "Studying Texts",
+    "subtopics": [
+      "Plot and themes",
+      "Character motives",
+      "Staging ideas",
+      "Review writing"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "drama-y11-scripted",
+    "subject": "drama",
+    "year": 11,
+    "term": null,
+    "title": "Scripted Performance",
+    "subtopics": [
+      "Extract choice",
+      "Rehearsal methods",
+      "Character depth",
+      "Audience impact"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: scripted extracts performance",
+    "url": null
+  },
+  {
+    "id": "drama-y11-live-review",
+    "subject": "drama",
+    "year": 11,
+    "term": null,
+    "title": "Live Theatre Review",
+    "subtopics": [
+      "Design elements",
+      "Acting evaluation",
+      "Directorial intent",
+      "Review structure"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "drama-y11-written-exam",
+    "subject": "drama",
+    "year": 11,
+    "term": null,
+    "title": "Written Exam Preparation",
+    "subtopics": [
+      "Set-text recall",
+      "Stage directions",
+      "Technical terms",
+      "Timed answers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "drama-y11-final-prep",
+    "subject": "drama",
+    "year": 11,
+    "term": null,
+    "title": "Final Preparation",
+    "subtopics": [
+      "Line learning",
+      "Tech rehearsals",
+      "Feedback loops",
+      "Performance polish"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: final showcases and notes",
+    "url": null
+  },
+  {
+    "id": "music-y10-performing",
+    "subject": "music",
+    "year": 10,
+    "term": null,
+    "title": "Solo and Ensemble",
+    "subtopics": [
+      "Instrument technique",
+      "Rehearsal routines",
+      "Expression dynamics",
+      "Recording takes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: recorded performance takes",
+    "url": null
+  },
+  {
+    "id": "music-y10-composing",
+    "subject": "music",
+    "year": 10,
+    "term": null,
+    "title": "Composing Basics",
+    "subtopics": [
+      "Melody rhythm",
+      "Chords harmony",
+      "Structure forms",
+      "Notation software"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: composition drafts with log",
+    "url": null
+  },
+  {
+    "id": "music-y10-listening",
+    "subject": "music",
+    "year": 10,
+    "term": null,
+    "title": "Listening Skills",
+    "subtopics": [
+      "Elements of music",
+      "Rhythmic dictation",
+      "World music",
+      "Film music"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "music-y10-theory",
+    "subject": "music",
+    "year": 10,
+    "term": null,
+    "title": "Theory Foundations",
+    "subtopics": [
+      "Note reading",
+      "Scales keys",
+      "Intervals triads",
+      "Cadences"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "music-y11-performance",
+    "subject": "music",
+    "year": 11,
+    "term": null,
+    "title": "Performance Polish",
+    "subtopics": [
+      "Programme choice",
+      "Stamina practice",
+      "Stage presence",
+      "Evaluation notes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: final performance recordings",
+    "url": null
+  },
+  {
+    "id": "music-y11-composition",
+    "subject": "music",
+    "year": 11,
+    "term": null,
+    "title": "Composition Finish",
+    "subtopics": [
+      "Brief fulfilment",
+      "Developing ideas",
+      "Mixing balance",
+      "Commentary writing"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: final mixes and write-up",
+    "url": null
+  },
+  {
+    "id": "music-y11-appraising",
+    "subject": "music",
+    "year": 11,
+    "term": null,
+    "title": "Appraising Exam",
+    "subtopics": [
+      "Set works recall",
+      "Comparing styles",
+      "Musical vocabulary",
+      "Unknown excerpts"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "music-y11-exam-revision",
+    "subject": "music",
+    "year": 11,
+    "term": null,
+    "title": "Exam Revision",
+    "subtopics": [
+      "Listening drills",
+      "Theory papers",
+      "Command words",
+      "Timed mocks"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y10-anatomy",
+    "subject": "gcse-pe",
+    "year": 10,
+    "term": null,
+    "title": "Applied Anatomy",
+    "subtopics": [
+      "Bones and joints",
+      "Muscle pairs",
+      "Cardiac cycle",
+      "Breathing volumes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: warm-up and fitness links",
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y10-movement",
+    "subject": "gcse-pe",
+    "year": 10,
+    "term": null,
+    "title": "Movement Analysis",
+    "subtopics": [
+      "Levers planes",
+      "Skill classification",
+      "Guidance feedback",
+      "Practice types"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y10-training",
+    "subject": "gcse-pe",
+    "year": 10,
+    "term": null,
+    "title": "Training Methods",
+    "subtopics": [
+      "Components fitness",
+      "Principles overload",
+      "Session planning",
+      "Injury prevention"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: fitness testing battery",
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y10-sport-theory",
+    "subject": "gcse-pe",
+    "year": 10,
+    "term": null,
+    "title": "Sport in Society",
+    "subtopics": [
+      "Participation trends",
+      "Commercialisation",
+      "Etiquette respect",
+      "Drugs in sport"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y11-performance",
+    "subject": "gcse-pe",
+    "year": 11,
+    "term": null,
+    "title": "Practical Performance",
+    "subtopics": [
+      "Three-sport roles",
+      "Tactical decisions",
+      "Weakness action plans",
+      "Video analysis"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: assessed performances in sports",
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y11-coursework",
+    "subject": "gcse-pe",
+    "year": 11,
+    "term": null,
+    "title": "Coursework Analysis",
+    "subtopics": [
+      "Action-plan writing",
+      "Data collection",
+      "Evaluating progress",
+      "Technical language"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Coursework: analysis and evaluation task",
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y11-psychology",
+    "subject": "gcse-pe",
+    "year": 11,
+    "term": null,
+    "title": "Sports Psychology",
+    "subtopics": [
+      "Goal setting",
+      "Arousal control",
+      "Aggression management",
+      "Personality types"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "gcse-pe-y11-exam-prep",
+    "subject": "gcse-pe",
+    "year": 11,
+    "term": null,
+    "title": "Exam Preparation",
+    "subtopics": [
+      "6 and 9 markers",
+      "Data questions",
+      "Topic recall",
+      "Mock papers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "btec-sport-y10-fitness",
+    "subject": "btec-sport",
+    "year": 10,
+    "term": null,
+    "title": "Fitness for Sport",
+    "subtopics": [
+      "Components testing",
+      "Training zones",
+      "Session design",
+      "Heart-rate data"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: leading warm-ups safely",
+    "url": null
+  },
+  {
+    "id": "btec-sport-y10-practical",
+    "subject": "btec-sport",
+    "year": 10,
+    "term": null,
+    "title": "Practical Performance",
+    "subtopics": [
+      "Rules and tactics",
+      "Skills drills",
+      "Officiating basics",
+      "Review logs"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: team and individual sports",
+    "url": null
+  },
+  {
+    "id": "btec-sport-y10-training-btec",
+    "subject": "btec-sport",
+    "year": 10,
+    "term": null,
+    "title": "Training for Fitness",
+    "subtopics": [
+      "Aerobic endurance",
+      "Strength methods",
+      "Flexibility work",
+      "Programme design"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: personal programme sessions",
+    "url": null
+  },
+  {
+    "id": "btec-sport-y10-injury",
+    "subject": "btec-sport",
+    "year": 10,
+    "term": null,
+    "title": "Injury and Lifestyle",
+    "subtopics": [
+      "Warm-up value",
+      "Common injuries",
+      "Diet and sleep",
+      "Risk assessments"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "btec-sport-y11-leadership",
+    "subject": "btec-sport",
+    "year": 11,
+    "term": null,
+    "title": "Sports Leadership",
+    "subtopics": [
+      "Leader qualities",
+      "Session planning",
+      "Demonstrating skills",
+      "Reviewing delivery"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: leading mini-sessions",
+    "url": null
+  },
+  {
+    "id": "btec-sport-y11-assignments",
+    "subject": "btec-sport",
+    "year": 11,
+    "term": null,
+    "title": "Assignment Completion",
+    "subtopics": [
+      "Command verbs",
+      "Referencing evidence",
+      "Meeting criteria",
+      "Resubmission fixes"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "btec-sport-y11-analysis",
+    "subject": "btec-sport",
+    "year": 11,
+    "term": null,
+    "title": "Performance Analysis",
+    "subtopics": [
+      "Notational basics",
+      "Strengths gaps",
+      "SMART targets",
+      "Progress reviews"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": "Practical: filmed performance review",
+    "url": null
+  },
+  {
+    "id": "btec-sport-y11-revision-test",
+    "subject": "btec-sport",
+    "year": 11,
+    "term": null,
+    "title": "Test Revision",
+    "subtopics": [
+      "Nutrition recap",
+      "Body systems",
+      "Test technique",
+      "Practice papers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y10-enterprise",
+    "subject": "business-studies",
+    "year": 10,
+    "term": null,
+    "title": "Enterprise and Ideas",
+    "subtopics": [
+      "Spotting gaps",
+      "Business aims",
+      "Risk and reward",
+      "Legal structures"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y10-marketing",
+    "subject": "business-studies",
+    "year": 10,
+    "term": null,
+    "title": "Marketing",
+    "subtopics": [
+      "Market research",
+      "4Ps mix",
+      "Pricing tactics",
+      "Branding"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y10-operations",
+    "subject": "business-studies",
+    "year": 10,
+    "term": null,
+    "title": "Operations",
+    "subtopics": [
+      "Production methods",
+      "Quality control",
+      "Stock control",
+      "Suppliers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y10-finance-intro",
+    "subject": "business-studies",
+    "year": 10,
+    "term": null,
+    "title": "Finance Introduction",
+    "subtopics": [
+      "Costs and revenue",
+      "Break-even basics",
+      "Cash flow",
+      "Profit maths"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y11-finance",
+    "subject": "business-studies",
+    "year": 11,
+    "term": null,
+    "title": "Finance and Accounts",
+    "subtopics": [
+      "Break-even charts",
+      "Margins ratios",
+      "Cash-flow forecasts",
+      "Investment choices"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y11-hr",
+    "subject": "business-studies",
+    "year": 11,
+    "term": null,
+    "title": "People and Leadership",
+    "subtopics": [
+      "Motivation theories",
+      "Organisation charts",
+      "Recruitment steps",
+      "Employment law"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y11-growth",
+    "subject": "business-studies",
+    "year": 11,
+    "term": null,
+    "title": "Growth and Strategy",
+    "subtopics": [
+      "Expansion methods",
+      "Global trade",
+      "Ethics pressure",
+      "External shocks"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "business-studies-y11-exam-prep",
+    "subject": "business-studies",
+    "year": 11,
+    "term": null,
+    "title": "Exam Preparation",
+    "subtopics": [
+      "Case-study method",
+      "9 and 12 markers",
+      "Calculation checks",
+      "Timed papers"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y10-wellbeing",
+    "subject": "big-picture",
+    "year": 10,
+    "term": null,
+    "title": "Wellbeing and Study",
+    "subtopics": [
+      "Growth mindset",
+      "Sleep and health",
+      "Organisation tools",
+      "Revision habits"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y10-careers",
+    "subject": "big-picture",
+    "year": 10,
+    "term": null,
+    "title": "Careers and Next Steps",
+    "subtopics": [
+      "Options at 16",
+      "CV and interviews",
+      "Work experience",
+      "Labour market"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y10-citizenship",
+    "subject": "big-picture",
+    "year": 10,
+    "term": null,
+    "title": "Citizenship",
+    "subtopics": [
+      "Democracy basics",
+      "Law and rights",
+      "Diverse Britain",
+      "Volunteering"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y10-money",
+    "subject": "big-picture",
+    "year": 10,
+    "term": null,
+    "title": "Money and Safety",
+    "subtopics": [
+      "Budgeting basics",
+      "Saving choices",
+      "Online safety",
+      "Healthy relationships"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y11-exams",
+    "subject": "big-picture",
+    "year": 11,
+    "term": null,
+    "title": "Exam Readiness",
+    "subtopics": [
+      "Revision methods",
+      "Timetabling mocks",
+      "Stress strategies",
+      "Exam-day routines"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y11-post16",
+    "subject": "big-picture",
+    "year": 11,
+    "term": null,
+    "title": "Post-16 Planning",
+    "subtopics": [
+      "College applications",
+      "Apprenticeships",
+      "Personal statements",
+      "Interview prep"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y11-society",
+    "subject": "big-picture",
+    "year": 11,
+    "term": null,
+    "title": "Society and Media",
+    "subtopics": [
+      "News literacy",
+      "Bias detection",
+      "Environmental action",
+      "Community project"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  },
+  {
+    "id": "big-picture-y11-next-steps",
+    "subject": "big-picture",
+    "year": 11,
+    "term": null,
+    "title": "Next Steps",
+    "subtopics": [
+      "Results-day plans",
+      "Enrolment prep",
+      "Independence skills",
+      "Celebrating progress"
+    ],
+    "source": "supplementary",
+    "verification": "supplementary",
+    "examBoard": null,
+    "tier": "all",
+    "practical": null,
+    "url": null
+  }
+]
